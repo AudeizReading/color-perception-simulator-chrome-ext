@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daltonism Simulator</title>
+  </head>
+  <body>
+    <style>
+      /* Général */
+      /*
+	  Palette: 
+	  - Vert émeraude: #349188
+	  - Vert Sapin: #2a3c3a
+	  - Coquille d'œuf: #feffdb
+	  - Violet indigo: #633491
+	  - Vert kaki clair: #909134
+	  - Marron brique: #915234
+	  */
+      :root {
+        --emerald: rgb(52, 145, 136);
+        --pine: rgb(42, 60, 58);
+        --eggshell: #feffdb;
+        --indigo-violet: #633491;
+        --light-khaki-green: #909134;
+        --brick-brown: #915234;
+      }
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: var(--emerald); /* Vert émeraude */
+        color: var(--eggshell); /* Coquille d'œuf pour le texte */
+        font-family: Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-width: 320px;
+        min-height: 100vh;
+      }
+
+      /* En-tête */
+      header {
+        background-color: var(--indigo-violet);
+        padding: 16px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      /* Boutons */
+      button {
+        background-color: var(--emerald); /* Vert kaki clair */
+        color: var(--eggshell); /* Coquille d'œuf pour le texte */
+        border: none;
+        outline: var(--indigo-violet);
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button#reset {
+        background-color: var(--light-khaki-green); /* Marron brique */
+        color: var(--eggshell); /* Coquille d'œuf pour le texte */
+        border: none;
+        outline: var(--indigo-violet);
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: var(--indigo-violet); /* Indigo au survol */
+      }
+      button#reset:hover {
+        background-color: var(--pine); /* Pine au survol */
+        border: solid 1px var(--pine);
+      }
+
+      button:focus {
+        outline: dotted 2px var(--emerald);
+        border: solid 1px var(--indigo-violet);
+        box-shadow: 1px 1px 0 4px rgba(52, 145, 136, 0.4); /*Halo léger autour du bouton*/
+      }
+
+      button#reset:focus {
+        outline: dotted 2px var(--light-khaki-green);
+        border: solid 1px var(--pine);
+        box-shadow: 1px 1px 0 4px rgba(42, 60, 58, 0.4);
+      }
+
+      /* Cartes d'information */
+      .card {
+        background-color: var(--eggshell); /* Coquille d'œuf */
+        color: var(--pine); /* Vert Sapin pour le texte */
+        padding: 20px;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(145, 82, 52, 0.3);
+      }
+
+      .card p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+
+      /* Section de contenu secondaire */
+      section.secondary {
+        background-color: var(--light-khaki-green); /* Vert kaki clair */
+        color: var(--eggshell); /* Coquille d'œuf pour le texte */
+        padding: 10px 0;
+      }
+    </style>
+    <header>
+      <h1>Daltonism Simulator</h1>
+    </header>
+    <main>
+      <section class="card">
+        <p>
+          Le protanope est une personne qui ne perçoit pas la couleur rouge. Les
+          couleurs rouges, oranges et jaunes apparaissent plus sombres, tandis
+          que les verts et les bleus apparaissent plus lumineux.
+        </p>
+        <button id="protanope">Protanope</button>
+      </section>
+      <section class="card">
+        <p>
+          Le deutéranope est une personne qui ne perçoit pas la couleur verte.
+          Les couleurs vertes apparaissent plus sombres, tandis que les rouges
+          et les bruns apparaissent plus lumineux.
+        </p>
+        <button id="deuteranope">Deutéranope</button>
+      </section>
+      <section class="card">
+        <p>
+          Le tritanope est une personne qui ne perçoit pas la couleur bleue. Les
+          couleurs bleues apparaissent plus sombres, tandis que les jaunes et
+          les rouges apparaissent plus lumineux.
+        </p>
+        <button id="tritanope">Tritanope</button>
+      </section>
+    </main>
+    <section class="secondary">
+      <section class="card">
+        <button id="reset">Reset</button>
+      </section>
+    </section>
+    <script src="popup.js"></script>
+  </body>
+</html>

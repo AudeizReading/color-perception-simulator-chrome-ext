@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Daltonism Simulator",
+  "version": "1.0",
+  "description": "Simulate Daltonism in your browser (protanopia, deuteranopia, tritanopia)",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Daltonism Simulator",
+    "default_popup": "popup.html"
+  }
+}
