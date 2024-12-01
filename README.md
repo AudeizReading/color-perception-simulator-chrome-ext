@@ -1,4 +1,4 @@
-# Daltonism Simulator
+# Color Perception Simulator
 
 Cette extension permet de donner un aperçu approximatif des effets qu'induisent un trouble de la perception des couleurs. Une personne sur 20 souffre d'un de ces troubles.
 
