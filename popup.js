@@ -7,6 +7,9 @@ document.getElementById("deuteranope").addEventListener("click", () => {
 document.getElementById("tritanope").addEventListener("click", () => {
   applyFilter("tritanope");
 });
+document.getElementById("achromatope").addEventListener("click", () => {
+  applyFilter("achromatope");
+});
 document.getElementById("reset").addEventListener("click", () => {
   applyFilter("reset");
 });

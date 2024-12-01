@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Daltonism Simulator",
+  "name": "Color Perception Simulator",
   "version": "1.0",
-  "description": "Simulate Daltonism in your browser (protanopia, deuteranopia, tritanopia)",
+  "description": "Simulate Troubles of Color Perception in your browser (protanopia, deuteranopia, tritanopia, achromatopsia)",
   "permissions": ["scripting", "activeTab"],
   "host_permissions": ["<all_urls>"],
   "action": {
-    "default_title": "Daltonism Simulator",
+    "default_title": "Color Perception Simulator",
     "default_popup": "popup.html"
   }
 }

@@ -1,13 +1,13 @@
 # Daltonism Simulator
 
-Cette extension permet de donner un aperçu approximatif de ce que le daltonisme produit sur la perception des couleurs. Une personne sur 20 souffre d'un trouble de la perception des couleurs.
+Cette extension permet de donner un aperçu approximatif des effets qu'induisent un trouble de la perception des couleurs. Une personne sur 20 souffre d'un de ces troubles.
 
-## Types de trouble de la perception des couleurs (Daltonisme)
+## Types de trouble de la perception des couleurs
 
 Le visuel est tiré de la [Roue des Couleurs](https://www.canva.com/colors/color-wheel/) du site [Canva](https://www.canva.com/)
 ![Roue des Couleurs](./doc/assets/color_wheels_canva.png)
 
-Il existe trois types principaux de trouble de la perception des couleurs :
+Il existe quatre types principaux de trouble de la perception des couleurs :
 
 1. **Protanopie** : Les personnes atteintes de protanopie ont des difficultés à percevoir les teintes rouges. Cela peut rendre les rouges, oranges et certains verts difficiles à distinguer.
    ![Protanopie](./doc/assets/protanope.png)
@@ -17,6 +17,9 @@ Il existe trois types principaux de trouble de la perception des couleurs :
 
 3. **Tritanopie** : Les personnes atteintes de tritanopie ont des difficultés à percevoir les teintes bleues. Cela peut rendre les bleus et certains jaunes difficiles à distinguer.
    ![Tritanopie](./doc/assets/tritanope.png)
+
+4. **Achromatopsie** : Les personnes atteintes d'achromatopsie ne perçoivent aucune couleur et voient le monde en nuances de gris. Ce trouble est rare et est souvent associé à une sensibilité à la lumière et une faible acuité visuelle.
+	![Achromatopsie](./doc/assets/achromatope.png)
 
 ## Création d'une Extension Chrome
 
