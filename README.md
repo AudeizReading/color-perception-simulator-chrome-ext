@@ -40,6 +40,11 @@ Pour utiliser l'extension localement :
 4. Cliquez sur "Charger l'extension décompressée" et sélectionnez le dossier contenant vos fichiers.
 5. Cliquez sur l'icône de l'extension pour appliquer les filtres.
 
+
+https://github.com/user-attachments/assets/441526a1-8e1e-49af-8fdc-c2b7f1967f71
+
+
+
 ## Documentation
 
 ### Génération du thème CSS Material-like
