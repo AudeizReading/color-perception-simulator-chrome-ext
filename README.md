@@ -10,16 +10,16 @@ Le visuel est tiré de la [Roue des Couleurs](https://www.canva.com/colors/color
 Il existe quatre types principaux de trouble de la perception des couleurs :
 
 1. **Protanopie** : Les personnes atteintes de protanopie ont des difficultés à percevoir les teintes rouges. Cela peut rendre les rouges, oranges et certains verts difficiles à distinguer.
-   ![Protanopie](./doc/assets/protanope.png)
+   ![Protanopie](./doc/assets/protanopia.png)
 
 2. **Deutéranopie** : Les personnes atteintes de deutéranopie ont des difficultés à percevoir les teintes vertes. Cela peut rendre les verts, jaunes et certains rouges difficiles à distinguer.
-   ![Deutéranopie](./doc/assets/deuteranope.png)
+   ![Deutéranopie](./doc/assets/deuteranopia.png)
 
 3. **Tritanopie** : Les personnes atteintes de tritanopie ont des difficultés à percevoir les teintes bleues. Cela peut rendre les bleus et certains jaunes difficiles à distinguer.
-   ![Tritanopie](./doc/assets/tritanope.png)
+   ![Tritanopie](./doc/assets/tritanopia.png)
 
 4. **Achromatopsie** : Les personnes atteintes d'achromatopsie ne perçoivent aucune couleur et voient le monde en nuances de gris. Ce trouble est rare et est souvent associé à une sensibilité à la lumière et une faible acuité visuelle.
-	![Achromatopsie](./doc/assets/achromatope.png)
+   ![Achromatopsie](./doc/assets/achromatopsie.png)
 
 ## Création d'une Extension Chrome
 
@@ -40,11 +40,23 @@ Pour utiliser l'extension localement :
 4. Cliquez sur "Charger l'extension décompressée" et sélectionnez le dossier contenant vos fichiers.
 5. Cliquez sur l'icône de l'extension pour appliquer les filtres.
 
+
+https://github.com/user-attachments/assets/441526a1-8e1e-49af-8fdc-c2b7f1967f71
+
+
+
 ## Documentation
+
+### Génération du thème CSS Material-like
+
+23/02/2025: Reprise du thème pour une approche plus accessible de l'extension, application du thème light, contraste standard
+
+- [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
 
 ### Canva
 
 - [Roue des Couleurs](https://www.canva.com/colors/color-wheel/)
+
 ### Matrice de transformations:
 
 - [Chrome Developper](https://developer.chrome.com/docs/chromium/cvd?hl=fr)

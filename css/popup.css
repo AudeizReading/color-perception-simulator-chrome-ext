@@ -1,0 +1,134 @@
+/* Général */
+
+:root {
+  --primary: #1565c0; /* Bleu profond */
+  --secondary: #1e88e5; /* Bleu clair */
+  --background: #fafafa; /* Fond global blanc cassé */
+  --text: #212121; /* Texte principal */
+  --text-secondary: #757575; /* Gris adouci */
+  --button: #d84315; /* Orange rouge */
+  --button-hover: #ff6f00; /* Orange plus vif */
+
+  /* Reset Mode */
+  --reset-bg: #263238; /* Fond sombre */
+  --reset-text: #eceff1; /* Texte clair */
+  --reset-accent: #ffb300; /* Jaune ambré */
+  --reset-hover: #ff8f00; /* Orange vif */
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* En-tête */
+header {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  padding: 16px;
+  text-align: center;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Boutons */
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: 2px solid transparent;
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-color: var(--md-sys-color-outline);
+}
+
+button:focus {
+  outline: 2px solid var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-outline);
+  box-shadow: 0 0 8px var(--md-sys-color-shadow);
+}
+
+button:active {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border-color: var(--md-sys-color-outline);
+}
+
+button::selection {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+button#reset {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+  border: 2px solid var(--md-sys-color-outline);
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button#reset:hover {
+  background-color: var(--md-sys-color-tertiary-container);
+  color: var(--md-sys-color-on-tertiary-container);
+  border-color: var(--md-sys-color-outline);
+}
+
+button#reset:focus {
+  outline: 2px solid var(--md-sys-color-tertiary);
+  border-color: var(--md-sys-color-outline);
+  box-shadow: 0 0 8px var(--md-sys-color-shadow);
+}
+
+button#reset:active {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+}
+
+button#reset::selection {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+}
+
+/* Cartes d'information */
+.card {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: var(--md-sys-color-surface-container-lowest);
+  color: var(--md-sys-color-on-surface);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.card p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Section de contenu secondaire */
+section.secondary {
+  padding: 10px 0;
+  background-color: var(--md-sys-color-tertiary-container);
+  color: var(--md-sys-color-on-tertiary-container);
+}
