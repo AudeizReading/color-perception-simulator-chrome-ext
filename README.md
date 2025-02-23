@@ -19,7 +19,7 @@ Il existe quatre types principaux de trouble de la perception des couleurs :
    ![Tritanopie](./doc/assets/tritanope.png)
 
 4. **Achromatopsie** : Les personnes atteintes d'achromatopsie ne perçoivent aucune couleur et voient le monde en nuances de gris. Ce trouble est rare et est souvent associé à une sensibilité à la lumière et une faible acuité visuelle.
-	![Achromatopsie](./doc/assets/achromatope.png)
+   ![Achromatopsie](./doc/assets/achromatope.png)
 
 ## Création d'une Extension Chrome
 
@@ -42,9 +42,16 @@ Pour utiliser l'extension localement :
 
 ## Documentation
 
+### Génération du thème CSS Material-like
+
+23/02/2025: Reprise du thème pour une approche plus accessible de l'extension, application du thème light, contraste standard
+
+- [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
+
 ### Canva
 
 - [Roue des Couleurs](https://www.canva.com/colors/color-wheel/)
+
 ### Matrice de transformations:
 
 - [Chrome Developper](https://developer.chrome.com/docs/chromium/cvd?hl=fr)
