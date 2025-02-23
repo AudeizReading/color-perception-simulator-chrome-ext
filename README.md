@@ -40,6 +40,89 @@ Pour utiliser l'extension localement :
 4. Cliquez sur "Charger l'extension décompressée" et sélectionnez le dossier contenant vos fichiers.
 5. Cliquez sur l'icône de l'extension pour appliquer les filtres.
 
+## Rendre l'extension compatible avec Firefox:
+
+:warning: Il convient de créer un nouveau répertoire, car toute modification entrainera l'incompatibilité de l'autre version de l'extension: les scripts y sont interprétés directement depuis.
+
+### Modifications du fichier manifest.json
+
+Firefox supporte Manifest V2 et V3, mais certaines fonctionnalités de V3 ne sont pas encore totalement implémentées.
+Si l'extension est en Manifest V3, vérifier si elle fonctionne bien en mode développeur sous Firefox.
+Changer `"manifest*version": 3` en `"manifest_version": 2` si nécessaire.
+Remplacer toutes les instances de `chrome.*` par `browser.*` pour la compatibilité avec l’API `WebExtensions`.
+
+#### Exemple :
+
+```json
+"permissions": [
+	"activeTab",
+	"storage"
+],
+"background": {
+	"scripts": ["background.js"]
+}
+```
+
+Devient :
+
+```json
+"permissions": [
+	"activeTab",
+	"storage"
+],
+"background": {
+	"scripts": ["background.js"],
+	"persistent": false
+}
+```
+
+_(Firefox ne supporte pas encore les background scripts sous Manifest V3 comme Chrome.)_
+
+### Adaptation du code JavaScript
+
+Le code utilise `chrome.tabs`, il convient de changer cela en `browser.tabs`.
+
+#### Exemple :
+
+```js
+chrome.tabs.executeScript({ file: "content.js" });
+```
+
+Devient :
+
+```js
+browser.tabs.executeScript({ file: "content.js" });
+```
+
+Firefox utilise des promesses au lieu des callbacks dans certaines API.
+
+#### Exemple :
+
+```js
+chrome.storage.sync.get("mode", function (data) {
+  console.log(data.mode);
+});
+```
+
+Devient :
+
+```js
+browser.storage.sync.get("mode").then((data) => {
+  console.log(data.mode);
+});
+```
+
+### Procédure d’installation sous Firefox
+
+#### Activer le mode développeur
+
+- Ouvrir `about:debugging` dans Firefox et cliquer sur "This Firefox".
+- Cliquer sur **"Charger un module complémentaire temporaire"**.
+- Sélectionner le fichier manifest.json dans le dossier de ton extension.
+- Tester l’extension
+- Vérifier si les filtres CSS s’appliquent correctement.
+- Ouvrir la console (F12 > Console) pour voir s’il y a des erreurs liées aux API WebExtensions.
+
 
 https://github.com/user-attachments/assets/441526a1-8e1e-49af-8fdc-c2b7f1967f71
 

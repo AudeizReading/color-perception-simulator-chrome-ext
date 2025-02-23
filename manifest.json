@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Color Perception Simulator",
-  "version": "1.0",
-  "description": "Simulate Troubles of Color Perception in your browser (protanopia, deuteranopia, tritanopia, achromatopsia)",
+  "version": "1.1",
+  "description": "Simulate Troubles of Color Perception in your Firefox browser (protanopia, deuteranopia, tritanopia, achromatopsia)",
   "permissions": ["scripting", "activeTab"],
   "host_permissions": ["<all_urls>"],
   "action": {

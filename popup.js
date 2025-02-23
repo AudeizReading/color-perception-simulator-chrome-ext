@@ -31,14 +31,13 @@ filters.forEach((filter) => {
  * @param {*} filter
  */
 function applyFilter(filter) {
-  console.error("applyFilter", filter);
-  chrome.tabs.query(
+  browser.tabs.query(
     {
       active: true,
       currentWindow: true,
     },
     (tabs) => {
-      chrome.scripting.executeScript({
+      browser.scripting.executeScript({
         target: {
           tabId: tabs[0].id,
         },
@@ -46,4 +45,46 @@ function applyFilter(filter) {
       });
     }
   );
+}
+
+function createSVGFilter(type, matrix) {
+	let existingSvg = document.getElementById("color-filter-overlay");
+
+  if (!existingSvg) {
+    let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("id", "color-filter-overlay");
+    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    svg.setAttribute("width", "100vw");
+    svg.setAttribute("height", "100vh");
+    svg.setAttribute(
+      "style",
+      "position: fixed; top: 0; left: 0; mix-blend-mode: multiply; pointer-events: none; z-index: 9999;"
+    );
+
+    let filter = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "filter"
+	);
+	const filterName = `${type}-filter`;
+	filter.setAttribute("id", filterName);
+
+    let feColorMatrix = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "feColorMatrix"
+    );
+    feColorMatrix.setAttribute("type", "matrix");
+    feColorMatrix.setAttribute("values", filterMatrix);
+
+    filter.appendChild(feColorMatrix);
+    svg.appendChild(filter);
+
+    let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    rect.setAttribute("width", "100%");
+    rect.setAttribute("height", "100%");
+    rect.setAttribute("filter", "url(#colorblind-filter)");
+    rect.setAttribute("fill", "white");
+
+    svg.appendChild(rect);
+    document.body.appendChild(svg);
+  }
 }
