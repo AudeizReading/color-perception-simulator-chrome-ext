@@ -1,0 +1,52 @@
+Custom License for Accessibility Extension
+
+Copyright (C) Aude Lellouche 2025
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, and distribute copies of the Software solely for non-commercial purposes, subject to the following conditions:
+
+1. Non-Commercial Use Only
+
+The Software may not be used, copied, modified, distributed, or sublicensed for commercial purposes without the prior written consent of the author. Commercial purposes include, but are not limited to, selling, licensing, or using the Software as part of a commercial offering.
+
+2. Attribution
+
+Proper credit must be given to the original author (Aude Lellouche). Attribution must be visible in any distribution, reproduction, or derivative work.
+
+3. No Medical Use
+
+The Software is intended solely for educational and accessibility simulation purposes. It is not designed, intended, or certified for medical diagnosis, therapeutic use, or any other medical-related purpose. Users must not rely on the Software for any medical decision-making or clinical evaluation.
+
+4. Disclaimer of Warranty
+
+The Software is provided "as is", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the author be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Software or the use or other dealings in the Software.
+
+5. Contributions
+
+By submitting any contribution to this project, you agree to license it under the same terms as this license. You also affirm that you have the right to grant such a license.
+
+6. Third-Party Content
+
+This Software may include components, libraries, or assets created by third parties. All third-party content remains the property of its respective owners and is subject to their own licenses. The inclusion of such third-party materials does not imply any endorsement or affiliation.
+
+7. Code of Conduct
+
+All contributors must adhere to basic rules of conduct, including:
+No injection of malicious code.
+No unauthorized collection of user information.
+No violation of applicable laws.
+Respectful and professional communication.
+
+Contributions violating these principles will be immediately rejected.
+
+8. Governing Law
+
+This License shall be governed by and construed in accordance with the laws of the author's country of residence, without regard to its conflict of law provisions.
+
+9. Termination
+The author reserves the right to terminate this License at any time, for any reason. Upon termination, all rights granted under this License shall immediately cease, and you must cease all use of the Software.
+
+10. Acceptance
+By using, copying, modifying, or distributing the Software, you agree to be bound by the terms of this License. If you do not agree to these terms, you may not use the Software.
+
+11. Contact Information
+For any questions or inquiries regarding this License, please contact the author at: alellouc@student.42nice.fr

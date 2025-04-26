@@ -5,21 +5,21 @@ Cette extension permet de donner un aperçu approximatif des effets qu'induisent
 ## Types de trouble de la perception des couleurs
 
 Le visuel est tiré de la [Roue des Couleurs](https://www.canva.com/colors/color-wheel/) du site [Canva](https://www.canva.com/)
-![Roue des Couleurs](./doc/assets/color_wheels_canva.png)
+![Roue des Couleurs](./assets/images/readme/color_wheels_canva.png)
 
 Il existe quatre types principaux de trouble de la perception des couleurs :
 
 1. **Protanopie** : Les personnes atteintes de protanopie ont des difficultés à percevoir les teintes rouges. Cela peut rendre les rouges, oranges et certains verts difficiles à distinguer.
-   ![Protanopie](./doc/assets/protanopia.png)
+   ![Protanopie](./assets/images/readme/protanopia.png)
 
 2. **Deutéranopie** : Les personnes atteintes de deutéranopie ont des difficultés à percevoir les teintes vertes. Cela peut rendre les verts, jaunes et certains rouges difficiles à distinguer.
-   ![Deutéranopie](./doc/assets/deuteranopia.png)
+   ![Deutéranopie](./assets/images/readme/deuteranopia.png)
 
 3. **Tritanopie** : Les personnes atteintes de tritanopie ont des difficultés à percevoir les teintes bleues. Cela peut rendre les bleus et certains jaunes difficiles à distinguer.
-   ![Tritanopie](./doc/assets/tritanopia.png)
+   ![Tritanopie](./assets/images/readme/tritanopia.png)
 
 4. **Achromatopsie** : Les personnes atteintes d'achromatopsie ne perçoivent aucune couleur et voient le monde en nuances de gris. Ce trouble est rare et est souvent associé à une sensibilité à la lumière et une faible acuité visuelle.
-   ![Achromatopsie](./doc/assets/achromatopsie.png)
+   ![Achromatopsie](./assets/images/readme/achromatopsie.png)
 
 ## Création d'une Extension Chrome
 
@@ -32,7 +32,7 @@ Pour créer une extension Chrome, suivez ces étapes :
 
 ## Utilisation de l'Extension Localement
 
-Pour utiliser l'extension localement :
+### Pour utiliser l'extension localement
 
 1. Placez tous les fichiers dans un dossier.
 2. Ouvrez Chrome et allez à `chrome://extensions/`.
@@ -40,10 +40,19 @@ Pour utiliser l'extension localement :
 4. Cliquez sur "Charger l'extension décompressée" et sélectionnez le dossier contenant vos fichiers.
 5. Cliquez sur l'icône de l'extension pour appliquer les filtres.
 
+<https://github.com/user-attachments/assets/441526a1-8e1e-49af-8fdc-c2b7f1967f71>
 
-https://github.com/user-attachments/assets/441526a1-8e1e-49af-8fdc-c2b7f1967f71
+### Publication sur le store
 
+1. Créer un compte développeur sur le store Chrome, payer les 5 euros de frais d'inscription.
+2. S'assurer que les fichiers suivants sont présents dans le dossier de l'extension (et correctement configurés) :
 
+- `manifest.json`,
+- `background.js`,
+- `128.png`,
+
+3. Compresser le dossier de l'extension en un fichier ZIP.
+4. Aller sur le [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole) et cliquer sur "Add a new item".
 
 ## Documentation
 
@@ -57,9 +66,9 @@ https://github.com/user-attachments/assets/441526a1-8e1e-49af-8fdc-c2b7f1967f71
 
 - [Roue des Couleurs](https://www.canva.com/colors/color-wheel/)
 
-### Matrice de transformations:
+### Matrice de transformations
 
-- [Chrome Developper](https://developer.chrome.com/docs/chromium/cvd?hl=fr)
+- [Chrome Developer](https://developer.chrome.com/docs/chromium/cvd?hl=fr)
 - [A Physiologically-based Model for Simulation of Color Vision Deficiency](https://www.inf.ufrgs.br/%7Eoliveira/pubs_files/CVD_Simulation/CVD_Simulation.html)
 - [MDN <feColorMatrix>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix)
 
@@ -67,3 +76,7 @@ https://github.com/user-attachments/assets/441526a1-8e1e-49af-8fdc-c2b7f1967f71
 
 - [Chrome Developper Extension API](https://developer.chrome.com/docs/extensions/reference/api?hl=fr)
 - [Exemples d'extension](https://github.com/GoogleChrome/chrome-extensions-samples)
+
+### License
+
+- [Custom License](./LICENSE.txt)
