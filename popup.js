@@ -30,7 +30,8 @@ filters.forEach((filter) => {
  *
  * @param {*} filter
  */
-function applyFilter(filter) {
+
+function applyFilter(filter, severity = "1.0") {
   console.error("applyFilter", filter);
   chrome.tabs.query(
     {
@@ -38,12 +39,42 @@ function applyFilter(filter) {
       currentWindow: true,
     },
     (tabs) => {
-      chrome.scripting.executeScript({
-        target: {
-          tabId: tabs[0].id,
-        },
-        files: [`filters/utils.js`, `filters/${filter}.js`], // si on ne passe pas par un script, le filtre ne s'applique que sur la popup
-      });
+      if (filter === "reset") {
+        // Remove the filter by removing the CSS
+        chrome.scripting.removeCSS({
+          target: {
+            tabId: tabs[0].id,
+          },
+          css: `
+		  html, :root {
+			filter: grayscale(100%);
+		  }
+		`,
+        });
+      } else {
+        chrome.scripting.insertCSS({
+          target: {
+            tabId: tabs[0].id,
+          },
+          css: `
+		  html, :root {
+			filter: grayscale(100%);
+		  }
+		`,
+        });
+      }
+      //   chrome.scripting.removeCSS({
+      //     target: {
+      //       tabId: tabs[0].id,
+      //     },
+      //   });
+
+      // 	chrome.scripting.executeScript({
+      //     target: {
+      //       tabId: tabs[0].id,
+      //     },
+      //     files: [`filters/utils.js`, `filters/${filter}.js`], // si on ne passe pas par un script, le filtre ne s'applique que sur la popup
+      //   });
     }
   );
 }
