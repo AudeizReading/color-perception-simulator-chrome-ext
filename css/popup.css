@@ -1,56 +1,71 @@
 /* Général */
-
-:root {
-  --primary: #1565c0; /* Bleu profond */
-  --secondary: #1e88e5; /* Bleu clair */
-  --background: #fafafa; /* Fond global blanc cassé */
-  --text: #212121; /* Texte principal */
-  --text-secondary: #757575; /* Gris adouci */
-  --button: #d84315; /* Orange rouge */
-  --button-hover: #ff6f00; /* Orange plus vif */
-
-  /* Reset Mode */
-  --reset-bg: #263238; /* Fond sombre */
-  --reset-text: #eceff1; /* Texte clair */
-  --reset-accent: #ffb300; /* Jaune ambré */
-  --reset-hover: #ff8f00; /* Orange vif */
-}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --popup-width: 100ch;
+  --popup-height: 100ch;
+}
+
 body {
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
   font-family: Roboto, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  min-width: var(--popup-width);
+  min-height: var(--popup-height);
+  display: relative;
+  overflow: hidden;
 }
 
 /* En-tête */
 header {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
-  padding: 16px;
+  padding: 1em 2em;
   text-align: center;
+  position: sticky;
+  top: 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 header h1 {
   font-size: 1.5rem;
 }
 
+main {
+  width: 100%;
+  padding: 0.75em 1.5em;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: row;
+  gap: 1em;
+  overflow-y: auto;
+}
+
+section {
+  width: 100%;
+}
+
 /* Boutons */
 button {
-  padding: 12px 24px;
+  padding: 0.75em 1.5em;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 0.5em;
   cursor: pointer;
   transition: all 0.3s;
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
-  border: 2px solid transparent;
+  border: 0.125em solid transparent;
   outline: none;
 }
 
@@ -61,9 +76,9 @@ button:hover {
 }
 
 button:focus {
-  outline: 2px solid var(--md-sys-color-primary);
+  outline: 0.125em solid var(--md-sys-color-primary);
   border-color: var(--md-sys-color-outline);
-  box-shadow: 0 0 8px var(--md-sys-color-shadow);
+  box-shadow: 0 0 0.5em var(--md-sys-color-shadow);
 }
 
 button:active {
@@ -80,10 +95,10 @@ button::selection {
 button#reset {
   background-color: var(--md-sys-color-tertiary);
   color: var(--md-sys-color-on-tertiary);
-  border: 2px solid var(--md-sys-color-outline);
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 8px;
+  border: 0.125em solid var(--md-sys-color-outline);
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  border-radius: 0.5em;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -95,9 +110,9 @@ button#reset:hover {
 }
 
 button#reset:focus {
-  outline: 2px solid var(--md-sys-color-tertiary);
+  outline: 0.125em solid var(--md-sys-color-tertiary);
   border-color: var(--md-sys-color-outline);
-  box-shadow: 0 0 8px var(--md-sys-color-shadow);
+  box-shadow: 0 0 0.5em var(--md-sys-color-shadow);
 }
 
 button#reset:active {
@@ -112,23 +127,22 @@ button#reset::selection {
 
 /* Cartes d'information */
 .card {
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
+  padding: 0.75em 1.5em;
+  border-radius: 0.5em;
   background-color: var(--md-sys-color-surface-container-lowest);
   color: var(--md-sys-color-on-surface);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--md-sys-color-outline);
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+  border: 0.0625em solid var(--md-sys-color-outline);
 }
 
 .card p {
-  margin-bottom: 10px;
+  margin-bottom: 0.75em;
   font-size: 1rem;
 }
 
 /* Section de contenu secondaire */
 section.secondary {
-  padding: 10px 0;
+  padding: 0.75em 0;
   background-color: var(--md-sys-color-tertiary-container);
   color: var(--md-sys-color-on-tertiary-container);
 }
