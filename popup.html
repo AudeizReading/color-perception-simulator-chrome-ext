@@ -1,78 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Color Perception Simulator</title>
-  </head>
-  <body>
     <link rel="stylesheet" type="text/css" href="/css/light.css" />
     <link rel="stylesheet" type="text/css" href="/css/popup.css" />
+    <title>Color Perception Simulator</title>
+  </head>
+
+  <body>
     <header>
       <h1>Color Perception Simulator</h1>
-	  <button id="reset">Reset</button>
+      <button id="reset">Reset</button>
     </header>
     <main id="main-container">
       <section class="card">
+        <h2>Protanopie</h2>
         <p>
           Le protanope est une personne qui ne perçoit pas la couleur rouge. Les
           couleurs rouges, oranges et jaunes apparaissent plus sombres, tandis
           que les verts et les bleus apparaissent plus lumineux.
         </p>
-        <button id="protanope">Protanope</button>
+        <section class="card-controls">
+          <button id="protanope">Simuler</button>
+          <label for="range-protanope"
+            >Intensité
+            <input
+              type="range"
+              id="range-protanope"
+              min="0"
+              max="1"
+              value="1"
+              step="0.1"
+          /></label>
+        </section>
       </section>
       <section class="card">
+        <h2>Deutéranopie</h2>
         <p>
           Le deutéranope est une personne qui ne perçoit pas la couleur verte.
           Les couleurs vertes apparaissent plus sombres, tandis que les rouges
           et les bruns apparaissent plus lumineux.
         </p>
-        <button id="deuteranope">Deutéranope</button>
+        <section class="card-controls">
+          <button id="deuteranope">Simuler</button>
+          <label for="range-deuteranope"
+            >Intensité
+            <input
+              type="range"
+              id="range-deuteranope"
+              min="0"
+              max="1"
+              value="1"
+              step="0.1"
+          /></label>
+        </section>
       </section>
       <section class="card">
+        <h2>Tritanopie</h2>
         <p>
           Le tritanope est une personne qui ne perçoit pas la couleur bleue. Les
           couleurs bleues apparaissent plus sombres, tandis que les jaunes et
           les rouges apparaissent plus lumineux.
         </p>
-        <button id="tritanope">Tritanope</button>
+        <section class="card-controls">
+          <button id="tritanope">Simuler</button>
+          <label for="range-tritanope"
+            >Intensité
+            <input
+              type="range"
+              id="range-tritanope"
+              min="0"
+              max="1"
+              value="1"
+              step="0.1"
+          /></label>
+        </section>
       </section>
       <section class="card">
+        <h2>Achromatopsie</h2>
         <p>
           L'achromatopsie est une personne qui ne perçoit pas la couleur. Les
           couleurs apparaissent en nuances de gris.
         </p>
-        <button id="achromatope">Achromatopsie</button>
+        <section class="card-controls">
+          <button id="achromatope">Simuler</button>
+          <label for="range-achromatope"
+            >Intensité
+            <input
+              type="range"
+              id="range-achromatope"
+              min="0"
+              max="1"
+              value="1"
+              step="0.1"
+          /></label>
+        </section>
       </section>
+
       <section class="card">
-        <p>
-          L'achromatopsie est une personne qui ne perçoit pas la couleur. Les
-          couleurs apparaissent en nuances de gris.
-        </p>
-        <button id="achromatope">Achromatopsie</button>
-      </section>
-      <section class="card">
+        <h2>Vision Floue</h2>
         <p>
           La vision floue réduit la netteté des contours et des détails, donnant
           l’impression que tout est légèrement voilé ou brumeux.
         </p>
-        <button id="blur">Blur</button>
-        <input
-          type="range"
-          id="range-blur"
-          min="0"
-          max="12"
-          value="3"
-          step="0.5"
-          disabled
-        />
+        <section class="card-controls">
+          <button id="blur">Simuler</button>
+          <label for="range-blur"
+            >Intensité
+            <input
+              type="range"
+              id="range-blur"
+              min="0"
+              max="1"
+              value="0.3"
+              step="0.1"
+          /></label>
+        </section>
       </section>
     </main>
-    <!-- <section class="secondary">
-      <section class="card">
-        <button id="reset">Reset</button>
-      </section>
-    </section> -->
+
+    <script src="filters/utils.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>
