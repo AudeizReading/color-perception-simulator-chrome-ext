@@ -8,8 +8,13 @@
 }
 
 :root {
-  --popup-width: 400px;
-  --popup-height: 600px;
+  --popup-width: 100%;
+  --popup-height: auto;
+  --_open: 0;
+  --_maxh: 0;
+  --_opacity: 0;
+  --_rotate: 45deg; /* chevron fermé */
+  --_gap: 0.25rem;
 }
 
 body {
@@ -18,7 +23,7 @@ body {
   font-family: Roboto, Arial, sans-serif;
   min-width: var(--popup-width);
   min-height: var(--popup-height);
-  overflow: hidden;
+  overflow: auto;
 }
 
 /* En-tête */
@@ -68,9 +73,9 @@ button:hover {
 }
 
 button:focus {
-  outline: 0.25em solid var(--md-sys-color-primary-container);
+  outline: 0.125em solid var(--md-sys-color-primary-container);
   border-color: var(--md-sys-color-outline);
-  box-shadow: 0 0 0.125em var(--md-sys-color-on-primary-fixed-variant);
+  box-shadow: 0 0 0.25em var(--md-sys-color-on-primary-fixed-variant);
 }
 
 button:active {
@@ -79,44 +84,27 @@ button:active {
   border-color: var(--md-sys-color-outline);
 }
 
-button::selection {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-}
-
 button#reset {
-  background-color: var(--md-sys-color-primary-container);
-  /* background-color: var(--md-sys-color-tertiary); */
-  color: var(--md-sys-color-on-primary-container);
-  border: 0.125em solid var(--md-sys-color-outline);
-  padding: 0.75em 1.5em;
   font-size: 1em;
-  border-radius: 0.5em;
-  cursor: pointer;
-  transition: all 0.3s;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-primary-container);
 }
 
 button#reset:hover {
-  background-color: var(--md-sys-color-tertiary-container);
-  color: var(--md-sys-color-on-tertiary-container);
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
 }
 
 button#reset:focus {
-  background-color: var(--md-sys-color-primary-container);
-  outline: 0.25em solid var(--md-sys-color-on-primary-fixed-dim);
-  box-shadow: 0 0 0.125em var(--md-sys-color-on-primary-fixed);
+  outline: 0.125em solid var(-md-sys-color-primary-container);
+  border-color: var(--md-sys-color-outline-variant);
+  box-shadow: 0 0 0.25em var(-md-sys-color-primary-container);
 }
 
 button#reset:active {
-  background-color: var(--md-sys-color-primary-container);
-  outline: 0.25em solid var(--md-sys-color-on-primary-fixed-dim);
-  box-shadow: 0 0 0.125em var(--md-sys-color-on-primary-fixed);
-}
-
-button#reset::selection {
-  background-color: var(--md-sys-color-primary-container);
-  outline: 0.25em solid var(--md-sys-color-on-primary-fixed-dim);
-  box-shadow: 0 0 0.125em var(--md-sys-color-on-primary-fixed);
+  border-color: var(--md-sys-color-outline-variant);
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-primary-container);
 }
 
 /* Cartes d'information */
@@ -134,14 +122,45 @@ button#reset::selection {
 }
 
 .card h2 {
+  position: relative;
   font-size: 1.25rem;
   margin-bottom: 0.5em;
   color: var(--md-sys-color-primary);
 }
 
+.card.is-open {
+  --_open: 1;
+  --_maxh: 500px;
+  --_opacity: 1;
+  --_rotate: -135deg; /* chevron ouvert */
+  --_gap: 0.5rem;
+}
+
+.card h2::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  width: 0.6em;
+  height: 0.6em;
+  transform: translateY(-50%) rotate(var(--_rotate));
+
+  /* Chevron avec bordures */
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transition: transform 0.2s ease;
+}
+
 .card p {
   margin-bottom: 0.75em;
   font-size: 1rem;
+
+  overflow: hidden;
+  max-height: var(--_maxh);
+  opacity: var(--_opacity);
+  transition: max-height 0.25s ease, opacity 0.2s ease, margin-top 0.2s ease;
+  margin-top: var(--_gap);
 }
 
 .card-controls {
@@ -163,4 +182,13 @@ button#reset::selection {
 
 .card-controls input[type="range"] {
   accent-color: var(--md-sys-color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card > h2::after,
+  .card > p,
+  .card > .card-controls {
+    transition: none;
+  }
 }

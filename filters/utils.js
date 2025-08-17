@@ -70,7 +70,7 @@ function getMatrixFilter(filterName, severity, registry = matrixFilters) {
   }
 
   const normSeverity = normaliseSeverity(severity);
-  if (!registry[filterName][normSeverity]) {
+  if (registry[filterName][normSeverity] === null) {
     throw new Error(
       `Severity ${normSeverity} does not exist for filter ${filterName}`
     );
@@ -177,4 +177,3 @@ setMatrixFilter(
   "1.0",
   "1.000 0.000 -0.000 0 0 0.000 1.000 0.000 0 0 -0.000 -0.000 1.000 0 0 0 0 0 1 0"
 );
-console.error("Matrix filters initialized:", matrixFilters);

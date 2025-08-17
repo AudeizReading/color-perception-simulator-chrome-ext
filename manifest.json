@@ -1,15 +1,28 @@
 {
   "manifest_version": 3,
-  "license": "SEE_LICENSE_FILE",
   "homepage_url": "https://github.com/AudeizReading/color-perception-simulator-chrome-ext",
   "name": "Color Perception Simulator",
-  "version": "1.1.0",
-  "description": "Simulate Troubles of Color Perception in your browser (protanopia, deuteranopia, tritanopia, achromatopsia)",
-  "permissions": ["scripting", "activeTab"],
+  "version": "2.0.0",
+  "description": "Simulate Troubles of Color Perception in your browser (protanopia, deuteranopia, tritanopia, achromatopsia, blur vision)",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "tabs",
+    "sidePanel",
+    "contextMenus"
+  ],
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_title": "Color Perception Simulator",
-    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "128.png",
+      "96": "./icons/color-perception-simulator-96.png",
+      "64": "./icons/color-perception-simulator-64.png",
+      "16": "./icons/color-perception-simulator-16.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "side_panel.html",
     "default_icon": {
       "128": "128.png",
       "96": "./icons/color-perception-simulator-96.png",
