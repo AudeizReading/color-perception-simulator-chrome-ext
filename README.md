@@ -71,6 +71,7 @@ Pour créer une extension Chrome, suivez ces étapes :
 - [Chrome Developer](https://developer.chrome.com/docs/chromium/cvd?hl=fr)
 - [A Physiologically-based Model for Simulation of Color Vision Deficiency](https://www.inf.ufrgs.br/%7Eoliveira/pubs_files/CVD_Simulation/CVD_Simulation.html)
 - [MDN <feColorMatrix>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix)
+- [Convert to GrayScale](https://developer.apple.com/documentation/Accelerate/converting-color-images-to-grayscale?utm_source=chatgpt.com)
 
 ### API Chrome
 
@@ -79,4 +80,18 @@ Pour créer une extension Chrome, suivez ces étapes :
 
 ### License
 
-- [Custom License](./LICENSE.txt)
+- [Custom License](./LICENSE.txt)## Nouveaux ajouts
+
+## Nouveaux ajouts
+
+- 17/08/2025 :
+
+1. **Menu contextuel** : Accès rapide à l'extension via menu contextuel (clic droit) ![Menu contextuel](./assets/images/store/ouvrir-via-menu-contextuel.png)
+1. **Interface en panneau latéral** : Remplacement du popup par un side panel ![Protanope avec details](./assets/images/store/protanopie-details-opened.png)
+1. **Curseurs d'intensité** : Pour chaque trouble, un curseur permet d'ajuster l'intensité et de se rendre compte des niveaux intermédiaires de troubles
+1. **Vision floue (blur effect)** : Simulation de l'effet de flou visuel ![Vision floue](./assets/images/store/blur-vision.png)
+1. **Support i18n** : L'extension est désormais localisée en français et en anglais, avec la possibilité d'ajouter d'autres langues facilement.
+
+L'extension utilise désormais l'API Side Panel de Chrome pour une meilleure intégration et le menu contextuel permet un accès direct aux filtres.
+
+:warning: **Note** : L'extension ne fonctionne pas sur les services **chrome** tels que ceux commencant par `chrome://` ou `chrome-extension://`. Chrome bloque ceci par sécurité. Il est recommandé de l'utiliser sur des sites web normaux pour une expérience optimale.
