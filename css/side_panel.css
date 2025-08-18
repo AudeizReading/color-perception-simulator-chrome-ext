@@ -96,7 +96,7 @@ button#reset:hover {
 }
 
 button#reset:focus {
-  outline: 0.125em solid var(-md-sys-color-primary-container);
+  outline: 0.125em solid var(--md-sys-color-primary-container);
   border-color: var(--md-sys-color-outline-variant);
   outline: 0.125em solid var(--md-sys-color-primary-container);
   border-color: var(--md-sys-color-outline-variant);
