@@ -9,33 +9,32 @@
     "activeTab",
     "tabs",
     "sidePanel",
-    "contextMenus",
-    "offscreen"
+    "contextMenus"
   ],
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_title": "Color Perception Simulator",
     "default_icon": {
       "128": "128.png",
-      "96": "./icons/color-perception-simulator-96.png",
-      "64": "./icons/color-perception-simulator-64.png",
-      "16": "./icons/color-perception-simulator-16.png"
+      "96": "icons/color-perception-simulator-96.png",
+      "64": "icons/color-perception-simulator-64.png",
+      "16": "icons/color-perception-simulator-16.png"
     }
   },
   "side_panel": {
     "default_path": "side_panel.html",
     "default_icon": {
       "128": "128.png",
-      "96": "./icons/color-perception-simulator-96.png",
-      "64": "./icons/color-perception-simulator-64.png",
-      "16": "./icons/color-perception-simulator-16.png"
+      "96": "icons/color-perception-simulator-96.png",
+      "64": "icons/color-perception-simulator-64.png",
+      "16": "icons/color-perception-simulator-16.png"
     }
   },
   "icons": {
     "128": "128.png",
-    "96": "./icons/color-perception-simulator-96.png",
-    "64": "./icons/color-perception-simulator-64.png",
-    "16": "./icons/color-perception-simulator-16.png"
+    "96": "icons/color-perception-simulator-96.png",
+    "64": "icons/color-perception-simulator-64.png",
+    "16": "icons/color-perception-simulator-16.png"
   },
   "default_locale": "fr",
   "background": {

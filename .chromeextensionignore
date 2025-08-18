@@ -1,0 +1,12 @@
+.github/
+.git/
+.gitignore
+.chromeextensionignore
+*.sh
+doc/
+assets/
+README.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+.DS_Store
