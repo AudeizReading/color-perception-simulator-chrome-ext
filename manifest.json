@@ -9,7 +9,8 @@
     "activeTab",
     "tabs",
     "sidePanel",
-    "contextMenus"
+    "contextMenus",
+    "offscreen"
   ],
   "host_permissions": ["<all_urls>"],
   "action": {
@@ -36,6 +37,7 @@
     "64": "./icons/color-perception-simulator-64.png",
     "16": "./icons/color-perception-simulator-16.png"
   },
+  "default_locale": "fr",
   "background": {
     "service_worker": "background.js"
   },

@@ -5,26 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/css/light.css" />
     <link rel="stylesheet" type="text/css" href="/css/side_panel.css" />
-    <title>Color Perception Simulator</title>
+    <title data-i18n="extension_title"></title>
   </head>
 
   <body>
     <header>
-      <h1>Color Perception Simulator</h1>
-      <button id="reset">Reset</button>
+      <h1
+        data-i18n="extension_title"
+        data-i18n-aria-label="extension_title"
+      ></h1>
+      <button
+        id="reset"
+        data-i18n="reset"
+        data-i18n-aria-label="reset"
+      ></button>
     </header>
+
     <main id="main-container">
       <section class="card">
-        <h2>Protanopie</h2>
-        <p>
-          Le protanope est une personne qui ne perçoit pas la couleur rouge. Les
-          couleurs rouges, oranges et jaunes apparaissent plus sombres, tandis
-          que les verts et les bleus apparaissent plus lumineux.
-        </p>
+        <h2 id="heading-protanopia" data-i18n="protanopia"></h2>
+        <p id="desc-protanopia" data-i18n="protanopia_description"></p>
         <section class="card-controls">
-          <button id="protanope">Simuler</button>
-          <label for="range-protanope"
-            >Intensité
+          <button
+            id="protanope"
+            data-i18n="simulate"
+            data-i18n-aria-label="simulate"
+            aria-labelledby="heading-protanopia"
+            aria-describedby="desc-protanopia"
+          ></button>
+          <label
+            id="label-range-protanope"
+            for="range-protanope"
+            data-i18n="intensity"
+          >
             <input
               type="range"
               id="range-protanope"
@@ -32,20 +45,28 @@
               max="1"
               value="1"
               step="0.1"
-          /></label>
+              aria-labelledby="label-range-protanope heading-protanopia"
+            />
+          </label>
         </section>
       </section>
+
       <section class="card">
-        <h2>Deutéranopie</h2>
-        <p>
-          Le deutéranope est une personne qui ne perçoit pas la couleur verte.
-          Les couleurs vertes apparaissent plus sombres, tandis que les rouges
-          et les bruns apparaissent plus lumineux.
-        </p>
+        <h2 id="heading-deuteranopia" data-i18n="deuteranopia"></h2>
+        <p id="desc-deuteranopia" data-i18n="deuteranopia_description"></p>
         <section class="card-controls">
-          <button id="deuteranope">Simuler</button>
-          <label for="range-deuteranope"
-            >Intensité
+          <button
+            id="deuteranope"
+            data-i18n="simulate"
+            data-i18n-aria-label="simulate"
+            aria-labelledby="heading-deuteranopia"
+            aria-describedby="desc-deuteranopia"
+          ></button>
+          <label
+            id="label-range-deuteranope"
+            for="range-deuteranope"
+            data-i18n="intensity"
+          >
             <input
               type="range"
               id="range-deuteranope"
@@ -53,20 +74,28 @@
               max="1"
               value="1"
               step="0.1"
-          /></label>
+              aria-labelledby="label-range-deuteranope heading-deuteranopia"
+            />
+          </label>
         </section>
       </section>
+
       <section class="card">
-        <h2>Tritanopie</h2>
-        <p>
-          Le tritanope est une personne qui ne perçoit pas la couleur bleue. Les
-          couleurs bleues apparaissent plus sombres, tandis que les jaunes et
-          les rouges apparaissent plus lumineux.
-        </p>
+        <h2 id="heading-tritanopia" data-i18n="tritanopia"></h2>
+        <p id="desc-tritanopia" data-i18n="tritanopia_description"></p>
         <section class="card-controls">
-          <button id="tritanope">Simuler</button>
-          <label for="range-tritanope"
-            >Intensité
+          <button
+            id="tritanope"
+            data-i18n="simulate"
+            data-i18n-aria-label="simulate"
+            aria-labelledby="heading-tritanopia"
+            aria-describedby="desc-tritanopia"
+          ></button>
+          <label
+            id="label-range-tritanope"
+            for="range-tritanope"
+            data-i18n="intensity"
+          >
             <input
               type="range"
               id="range-tritanope"
@@ -74,19 +103,28 @@
               max="1"
               value="1"
               step="0.1"
-          /></label>
+              aria-labelledby="label-range-tritanope heading-tritanopia"
+            />
+          </label>
         </section>
       </section>
+
       <section class="card">
-        <h2>Achromatopsie</h2>
-        <p>
-          L'achromatopsie est une personne qui ne perçoit pas la couleur. Les
-          couleurs apparaissent en nuances de gris.
-        </p>
+        <h2 id="heading-achromatopsia" data-i18n="achromatopsia"></h2>
+        <p id="desc-achromatopsia" data-i18n="achromatopsia_description"></p>
         <section class="card-controls">
-          <button id="achromatope">Simuler</button>
-          <label for="range-achromatope"
-            >Intensité
+          <button
+            id="achromatope"
+            data-i18n="simulate"
+            data-i18n-aria-label="simulate"
+            aria-labelledby="heading-achromatopsia"
+            aria-describedby="desc-achromatopsia"
+          ></button>
+          <label
+            id="label-range-achromatope"
+            for="range-achromatope"
+            data-i18n="intensity"
+          >
             <input
               type="range"
               id="range-achromatope"
@@ -94,20 +132,24 @@
               max="1"
               value="1"
               step="0.1"
-          /></label>
+              aria-labelledby="label-range-achromatope heading-achromatopsia"
+            />
+          </label>
         </section>
       </section>
 
       <section class="card">
-        <h2>Vision Floue</h2>
-        <p>
-          La vision floue réduit la netteté des contours et des détails, donnant
-          l’impression que tout est légèrement voilé ou brumeux.
-        </p>
+        <h2 id="heading-blur" data-i18n="blur_vision"></h2>
+        <p id="desc-blur" data-i18n="blur_vision_description"></p>
         <section class="card-controls">
-          <button id="blur">Simuler</button>
-          <label for="range-blur"
-            >Intensité
+          <button
+            id="blur"
+            data-i18n="simulate"
+            data-i18n-aria-label="simulate"
+            aria-labelledby="heading-blur"
+            aria-describedby="desc-blur"
+          ></button>
+          <label id="label-range-blur" for="range-blur" data-i18n="intensity">
             <input
               type="range"
               id="range-blur"
@@ -115,7 +157,9 @@
               max="1"
               value="0.3"
               step="0.1"
-          /></label>
+              aria-labelledby="label-range-blur heading-blur"
+            />
+          </label>
         </section>
       </section>
     </main>

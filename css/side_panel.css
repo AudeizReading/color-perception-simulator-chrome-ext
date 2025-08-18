@@ -192,3 +192,14 @@ button#reset:active {
     transition: none;
   }
 }
+
+.alert-error {
+  position: "absolute";
+  top: 0.5em;
+  right: 0.5em;
+  background: var(--md-sys-color-surface-on-alert);
+  color: var(--md-sys-color-on-primary);
+  padding: 0.75em;
+  border-radius: 0.25em;
+  z-index: 999999;
+}
