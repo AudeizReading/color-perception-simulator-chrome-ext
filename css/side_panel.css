@@ -196,7 +196,7 @@ button#reset:active {
 }
 
 .alert-error {
-  position: "absolute";
+  position: absolute;
   top: 0.5em;
   right: 0.5em;
   background: var(--md-sys-color-surface-on-alert);
