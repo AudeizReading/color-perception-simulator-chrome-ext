@@ -48,7 +48,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
     if (
       tab.url.startsWith("chrome://") ||
       tab.url.startsWith("chrome-extension://") ||
-      tab.url.startsWith("chrome.google.com/webstore")
+      tab.url.startsWith("https://chrome.google.com/webstore")
     ) {
       // Désactiver le side panel pour cet onglet
       chrome.sidePanel.setOptions({ tabId, enabled: false });
