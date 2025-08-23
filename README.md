@@ -84,6 +84,12 @@ Pour créer une extension Chrome, suivez ces étapes :
 
 ## Nouveaux ajouts
 
+- 23/08/2025 :
+
+1. **Fix bug clic sur l'icone d'action de l'extension** : Le panneau latéral s'ouvre correctement à chaque clic sur l'icône de l'extension.
+1. **Fix espacement du titre h2 des cards** : Correction de l'espacement du titre h2 dans les cartes pour une meilleure lisibilité.
+1. **Amélioration des URLs bloquées** : La fonction de détection des URLs bloquées a été améliorée pour inclure les URLs du Chrome Web Store et de Chrome Developer Documentations. Chrome bloque de lui-meme les extensions sur ses differents domaines pour des raisons de sécurité.
+
 - 17/08/2025 :
 
 1. **Menu contextuel** : Accès rapide à l'extension via menu contextuel (clic droit) ![Menu contextuel](./assets/images/store/ouvrir-via-menu-contextuel.png)
@@ -95,3 +101,16 @@ Pour créer une extension Chrome, suivez ces étapes :
 L'extension utilise désormais l'API Side Panel de Chrome pour une meilleure intégration et le menu contextuel permet un accès direct aux filtres.
 
 :warning: **Note** : L'extension ne fonctionne pas sur les services **chrome** tels que ceux commencant par `chrome://` ou `chrome-extension://`. Chrome bloque ceci par sécurité. Il est recommandé de l'utiliser sur des sites web normaux pour une expérience optimale.
+
+ℹ️ À propos de l’avertissement « Extension non approuvée »
+Lors de l’installation, Chrome peut afficher le message :
+« Extension non approuvée par la navigation sécurisée avec protection renforcée »
+👉 Ce message ne signifie pas que l’extension est dangereuse.
+Il s’agit d’un mécanisme de sécurité supplémentaire de Chrome (Enhanced Safe Browsing), qui peut afficher cet avertissement même pour des extensions publiées et validées sur le Chrome Web Store.
+Ce message est temporaire : il disparaît automatiquement après une période d’utilisation, lorsque Chrome reconnaît l’extension comme « de confiance ».
+Vous pouvez poursuivre l’installation en toute sécurité.
+
+L’extension a été vérifiée et approuvée par Google lors de sa publication.
+
+**Vous pouvez inspecter le code source distribué ici pour être sûr de son contenu : c'est exactement ces sources qui sont deployées sur le store.
+Cette extension a une visée éducative et humaniste. Je m'engage à ce qu'elle ne soit jamais intrusive, ni malveillante.**

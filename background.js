@@ -1,30 +1,58 @@
-// Only added for complying with the manifest v3 requirements
-// This file is not used in the extension but is required for the manifest v3
+function isBlockedUrl(url) {
+  try {
+    const u = new URL(url);
+    forbiddenProtocols = [
+      "chrome:",
+      "chrome-extension:",
+      "edge:",
+      "view-source:",
+    ];
+    if (forbiddenProtocols.includes(u.protocol)) {
+      return true;
+    }
+    forbiddenHostnames = [
+      "chrome.google.com",
+      "developer.chrome.com",
+      "chromewebstore.google.com",
+    ];
+    if (forbiddenHostnames.includes(u.hostname)) {
+      return true;
+    }
+    return false;
+  } catch {
+    return true;
+  }
+}
+
+chrome.action.onClicked.addListener((tab) => {
+  chrome.sidePanel
+    .open({
+      tabId: tab.id,
+    })
+    .catch((error) => console.error(error));
+});
+
 chrome.runtime.onInstalled.addListener((details) => {
   console.log(
     "Extension updated to version:",
     chrome.runtime.getManifest().version
   );
-  if (details.reason === "update") {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      const tab = tabs[0];
-      if (!tab || !tab.url) return;
-      const url = tab.url;
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    const tab = tabs[0];
+    if (!tab || !tab.url) return;
+    const url = tab.url;
 
-      // On évite les chrome:// etc
-      if (
-        url.startsWith("chrome://") ||
-        url.startsWith("chrome-extension://") ||
-        url.startsWith("https://chrome.google.com/webstore")
-      ) {
-        console.error(
-          chrome.i18n.getMessage("error_extension_usage_title"),
-          chrome.i18n.getMessage("error_extension_usage_message")
-        );
-        return;
-      }
-    });
-  }
+    // On évite les chrome:// etc
+
+    if (isBlockedUrl(url)) {
+      console.error(
+        chrome.i18n.getMessage("error_extension_usage_title"),
+        chrome.i18n.getMessage("error_extension_usage_message")
+      );
+      return;
+    }
+  });
+  //   }
 
   chrome.contextMenus.create({
     id: "openSidePanel",
@@ -45,11 +73,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
 chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
   if (tab.url) {
-    if (
-      tab.url.startsWith("chrome://") ||
-      tab.url.startsWith("chrome-extension://") ||
-      tab.url.startsWith("https://chrome.google.com/webstore")
-    ) {
+    if (isBlockedUrl(tab.url)) {
       // Désactiver le side panel pour cet onglet
       chrome.sidePanel.setOptions({ tabId, enabled: false });
     } else {

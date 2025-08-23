@@ -85,6 +85,7 @@ button:active {
 }
 
 button#reset {
+  padding: 0.75em;
   font-size: 1em;
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-primary-container);
@@ -126,7 +127,7 @@ button#reset:active {
 .card h2 {
   position: relative;
   font-size: 1.25rem;
-  margin-bottom: 0.5em;
+  margin-block: 0.25em;
   color: var(--md-sys-color-primary);
 }
 

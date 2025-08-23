@@ -48,7 +48,7 @@
     "description": "Label pour le curseur d'intensité"
   },
   "reset": {
-    "message": "Réinitialiser",
+    "message": "Restaurer",
     "description": "Bouton pour réinitialiser les filtres"
   },
   "simulate": {
