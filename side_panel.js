@@ -108,11 +108,7 @@ function applyFilter(filter, severity = "1.0") {
     },
     (tabs) => {
       const url = tabs[0]?.url || "";
-      if (
-        url.startsWith("chrome://") ||
-        url.startsWith("chrome-extension://") ||
-        url.startsWith("https://chrome.google.com/webstore")
-      ) {
+      if (isBlockedUrl(url)) {
         createAlertError();
       } else {
         const cssFilter = getMatrixFilter(filter, severity);

@@ -4,6 +4,32 @@
  * @author alellouc
  */
 
+function isBlockedUrl(url) {
+  try {
+    const u = new URL(url);
+    forbiddenProtocols = [
+      "chrome:",
+      "chrome-extension:",
+      "edge:",
+      "view-source:",
+    ];
+    if (forbiddenProtocols.includes(u.protocol)) {
+      return true;
+    }
+    forbiddenHostnames = [
+      "chrome.google.com",
+      "developer.chrome.com",
+      "chromewebstore.google.com",
+    ];
+    if (forbiddenHostnames.includes(u.hostname)) {
+      return true;
+    }
+    return false;
+  } catch {
+    return true;
+  }
+}
+
 const filters = Object.freeze([
   "protanope",
   "deuteranope",
