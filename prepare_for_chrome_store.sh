@@ -1,4 +1,5 @@
-rsync -av --exclude-from='.chromeextensionignore' . ${HOME}/Desktop/extensions-chrome/color-perception-simulator-v2
+version=${1:-"last"}
+rsync -av --exclude-from='.chromeextensionignore' . ${HOME}/Desktop/extensions-chrome/color-perception-simulator-${version}
 
-cd ${HOME}/Desktop/extensions-chrome/color-perception-simulator-v2
-zip -r ../color-perception-simulator-v2.zip .
+cd ${HOME}/Desktop/extensions-chrome/color-perception-simulator-${version}
+zip -r ../color-perception-simulator-${version}.zip .
