@@ -88,6 +88,7 @@ Pour créer une extension Chrome, suivez ces étapes :
 
 1. **Fix bug clic sur l'icone d'action de l'extension** : Le panneau latéral s'ouvre correctement à chaque clic sur l'icône de l'extension.
 1. **Fix espacement du titre h2 des cards** : Correction de l'espacement du titre h2 dans les cartes pour une meilleure lisibilité.
+1. **Fix css alert box** : Amélioration du style de la boîte d'alerte pour une meilleure visibilité et lisibilité.
 1. **Amélioration des URLs bloquées** : La fonction de détection des URLs bloquées a été améliorée pour inclure les URLs du Chrome Web Store et de Chrome Developer Documentations. Chrome bloque de lui-meme les extensions sur ses differents domaines pour des raisons de sécurité.
 
 - 17/08/2025 :
