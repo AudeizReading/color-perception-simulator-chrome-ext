@@ -24,35 +24,37 @@ function isBlockedUrl(url) {
   }
 }
 
-chrome.action.onClicked.addListener((tab) => {
-  chrome.sidePanel
-    .open({
-      tabId: tab.id,
-    })
-    .catch((error) => console.error(error));
-});
+chrome.sidePanel
+  .setPanelBehavior({ openPanelOnActionClick: true })
+  .catch((error) => console.error(error));
 
-chrome.runtime.onInstalled.addListener((details) => {
+chrome.runtime.onInstalled.addListener(async (details) => {
   console.log(
-    "Extension updated to version:",
-    chrome.runtime.getManifest().version
+    chrome.runtime.getManifest().name,
+    "version",
+    chrome.runtime.getManifest().version,
+    "installed reason:",
+    details.reason
   );
+
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const tab = tabs[0];
     if (!tab || !tab.url) return;
     const url = tab.url;
 
     // On évite les chrome:// etc
-
     if (isBlockedUrl(url)) {
+      chrome.sidePanel.setOptions({ tabId: tab.id, enabled: false });
       console.error(
         chrome.i18n.getMessage("error_extension_usage_title"),
         chrome.i18n.getMessage("error_extension_usage_message")
       );
       return;
+    } else {
+      // On active le side panel sur les autres sites
+      chrome.sidePanel.setOptions({ tabId: tab.id, enabled: true });
     }
   });
-  //   }
 
   chrome.contextMenus.create({
     id: "openSidePanel",
@@ -71,14 +73,13 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   }
 });
 
-chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
-  if (tab.url) {
-    if (isBlockedUrl(tab.url)) {
-      // Désactiver le side panel pour cet onglet
-      chrome.sidePanel.setOptions({ tabId, enabled: false });
-    } else {
-      // Réactiver sur les autres sites
-      chrome.sidePanel.setOptions({ tabId, enabled: true });
-    }
+chrome.action.onClicked.addListener(async (tab) => {
+  try {
+    await chrome.sidePanel.setOptions({ tabId: tab.id, enabled: true });
+    await chrome.sidePanel.open({
+      tabId: tab.id,
+    });
+  } catch (error) {
+    console.error(error);
   }
 });

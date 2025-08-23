@@ -107,6 +107,7 @@ L'extension utilise désormais l'API Side Panel de Chrome pour une meilleure int
 Lors de l’installation, Chrome peut afficher le message :
 « Extension non approuvée par la navigation sécurisée avec protection renforcée »
 👉 Ce message ne signifie pas que l’extension est dangereuse.
+
 Il s’agit d’un mécanisme de sécurité supplémentaire de Chrome (Enhanced Safe Browsing), qui peut afficher cet avertissement même pour des extensions publiées et validées sur le Chrome Web Store.
 Ce message est temporaire : il disparaît automatiquement après une période d’utilisation, lorsque Chrome reconnaît l’extension comme « de confiance ».
 Vous pouvez poursuivre l’installation en toute sécurité.
