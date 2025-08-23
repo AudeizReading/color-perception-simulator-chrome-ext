@@ -9,5 +9,7 @@ README.md
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 LICENSE
-.DS_Store
+*.DS_Store
+**/*.DS_Store
 *.crx
+.env
