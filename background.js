@@ -1,15 +1,26 @@
-chrome.sidePanel
-  .setPanelBehavior({ openPanelOnActionClick: true })
-  .catch((error) => console.error(error));
+function setChromeSidePanelBehavior(openPanelOnActionClick = true) {
+  // Set the side panel behavior to open when the user clicks on the extension action button
+  // But can lead to race conditions if the user clicks too fast
+  // That's why it has been re-launched at runtime.onInstalled time
+  chrome.sidePanel
+    .setPanelBehavior({ openPanelOnActionClick })
+    .catch((error) => console.error(error));
+}
+
+setChromeSidePanelBehavior();
 
 chrome.runtime.onInstalled.addListener((details) => {
+  const manifest = chrome.runtime.getManifest();
   console.log(
-    chrome.runtime.getManifest().name,
+    manifest.name,
     "version",
-    chrome.runtime.getManifest().version,
+    manifest.version,
     "installed reason:",
     details.reason
   );
+
+  // Set it by security at installion
+  setChromeSidePanelBehavior();
 
   chrome.contextMenus.create({
     id: "openSidePanel",
