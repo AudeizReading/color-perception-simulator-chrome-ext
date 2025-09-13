@@ -32,7 +32,7 @@
     "description": "Titre pour le filtre d'achromatopsie"
   },
   "achromatopsia_description": {
-    "message": "L'achromatope est une personne qui ne perçoit pas la couleur. Les couleurs apparaissent en nuances de gris",
+    "message": "L'achromatope est une personne qui ne perçoit pas la couleur. Les couleurs apparaissent en nuances de gris.",
     "description": "Description du trouble d'achromatopsie"
   },
   "blur_vision": {
