@@ -8,8 +8,8 @@
 }
 
 :root {
-    --popup-width: 100%;
-    --popup-height: auto;
+    --side-panel-width: 100%;
+    --side-panel-height: 100vh;
     --_open: 0;
     --_maxh: 0;
     --_opacity: 0;
@@ -24,9 +24,17 @@ body {
     background-color: var(--md-sys-color-background);
     color: var(--md-sys-color-on-background);
     font-family: Roboto, Arial, sans-serif;
-    min-width: var(--popup-width);
-    min-height: var(--popup-height);
-    overflow: auto;
+    width: var(--side-panel-width);
+    height: var(--side-panel-height);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-color-outline) transparent;
+    transition: all 0.3s ease-in-out;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable both-edges;
+    padding-bottom: 1em;
 }
 
 /* En-tête */
@@ -41,6 +49,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1em;
 }
 
 header h1 {
@@ -50,7 +59,7 @@ header h1 {
 
 main {
     width: 100%;
-    padding: 0.75em 1.5em;
+    padding: 0 1.5em 0.75em 1.5em;
     display: grid;
     grid-auto-flow: row;
     gap: 1em;
