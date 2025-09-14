@@ -1,78 +1,78 @@
 {
-  "extension_title": {
-    "message": "Simulateur de perception des couleurs",
-    "description": "Titre h1 de l'extension"
-  },
-  "protanopia": {
-    "message": "Protanopie",
-    "description": "Titre pour le filtre de protanopie"
-  },
-  "protanopia_description": {
-    "message": "Le protanope est une personne qui ne perçoit pas la couleur rouge. Les couleurs rouges, oranges et jaunes apparaissent plus sombres, tandis que les verts et les bleus apparaissent plus lumineux.",
-    "description": "Description du trouble de protanopie"
-  },
-  "deuteranopia": {
-    "message": "Deutéranopie",
-    "description": "Titre pour le filtre de deutéranopie"
-  },
-  "deuteranopia_description": {
-    "message": "Le deutéranope est une personne qui ne perçoit pas la couleur verte. Les couleurs vertes apparaissent plus sombres, tandis que les rouges et les bruns apparaissent plus lumineux.",
-    "description": "Description du trouble de deutéranopie"
-  },
-  "tritanopia": {
-    "message": "Tritanopie",
-    "description": "Titre pour le filtre de tritanopie"
-  },
-  "tritanopia_description": {
-    "message": "Le tritanope est une personne qui ne perçoit pas la couleur bleue. Les couleurs bleues apparaissent plus sombres, tandis que les jaunes et les rouges apparaissent plus lumineux.",
-    "description": "Description du trouble de tritanopie"
-  },
-  "achromatopsia": {
-    "message": "Achromatopsie",
-    "description": "Titre pour le filtre d'achromatopsie"
-  },
-  "achromatopsia_description": {
-    "message": "L'achromatope est une personne qui ne perçoit pas la couleur. Les couleurs apparaissent en nuances de gris.",
-    "description": "Description du trouble d'achromatopsie"
-  },
-  "blur_vision": {
-    "message": "Vision floue",
-    "description": "Titre pour le filtre de vision floue"
-  },
-  "blur_vision_description": {
-    "message": "La vision floue réduit la netteté des contours et des détails, donnant l’impression que tout est légèrement voilé ou brumeux.",
-    "description": "Description du trouble de vision floue"
-  },
-  "intensity": {
-    "message": "Intensité",
-    "description": "Label pour le curseur d'intensité"
-  },
-  "reset": {
-    "message": "Restaurer",
-    "description": "Bouton pour réinitialiser les filtres"
-  },
-  "simulate": {
-    "message": "Simuler",
-    "description": "Bouton pour appliquer les filtres de simulation"
-  },
-  "update_title": {
-    "message": "✨ Extension mise à jour !",
-    "description": "Titre de la notification lors d'une mise à jour"
-  },
-  "update_message": {
-    "message": "Nouveautés : vision floue, panneau latéral, menu contextuel, curseurs d’intensité, support multilingue.",
-    "description": "Contenu de la notification d’update"
-  },
-  "context_menu_title": {
-    "message": "Ouvrir dans le panneau latéral",
-    "description": "Title for the context menu"
-  },
-  "error_extension_usage_title": {
-    "message": "Extension non applicable sur cette page",
-    "description": "Titre de la notification d'erreur d'utilisation de l'extension"
-  },
-  "error_extension_usage_message": {
-    "message": "Par mesure de sécurité, l'extension ne peut pas être appliquée sur les pages internes de Chrome.",
-    "description": "Message de la notification d'erreur d'utilisation de l'extension"
-  }
+	"extension_title": {
+		"message": "Voir les couleurs autrement",
+		"description": "Titre h1 de l'extension"
+	},
+	"protanopia": {
+		"message": "Protanopie",
+		"description": "Titre pour le filtre de protanopie"
+	},
+	"protanopia_description": {
+		"message": "Le protanope est une personne qui ne perçoit pas la couleur rouge. Les couleurs rouges, oranges et jaunes apparaissent plus sombres, tandis que les verts et les bleus apparaissent plus lumineux.",
+		"description": "Description du trouble de protanopie"
+	},
+	"deuteranopia": {
+		"message": "Deutéranopie",
+		"description": "Titre pour le filtre de deutéranopie"
+	},
+	"deuteranopia_description": {
+		"message": "Le deutéranope est une personne qui ne perçoit pas la couleur verte. Les couleurs vertes apparaissent plus sombres, tandis que les rouges et les bruns apparaissent plus lumineux.",
+		"description": "Description du trouble de deutéranopie"
+	},
+	"tritanopia": {
+		"message": "Tritanopie",
+		"description": "Titre pour le filtre de tritanopie"
+	},
+	"tritanopia_description": {
+		"message": "Le tritanope est une personne qui ne perçoit pas la couleur bleue. Les couleurs bleues apparaissent plus sombres, tandis que les jaunes et les rouges apparaissent plus lumineux.",
+		"description": "Description du trouble de tritanopie"
+	},
+	"achromatopsia": {
+		"message": "Achromatopsie",
+		"description": "Titre pour le filtre d'achromatopsie"
+	},
+	"achromatopsia_description": {
+		"message": "L'achromatope est une personne qui ne perçoit pas la couleur. Les couleurs apparaissent en nuances de gris.",
+		"description": "Description du trouble d'achromatopsie"
+	},
+	"blur_vision": {
+		"message": "Vision floue",
+		"description": "Titre pour le filtre de vision floue"
+	},
+	"blur_vision_description": {
+		"message": "La vision floue réduit la netteté des contours et des détails, donnant l’impression que tout est légèrement voilé ou brumeux.",
+		"description": "Description du trouble de vision floue"
+	},
+	"intensity": {
+		"message": "Intensité",
+		"description": "Label pour le curseur d'intensité"
+	},
+	"reset": {
+		"message": "Restaurer",
+		"description": "Bouton pour réinitialiser les filtres"
+	},
+	"simulate": {
+		"message": "Simuler",
+		"description": "Bouton pour appliquer les filtres de simulation"
+	},
+	"update_title": {
+		"message": "✨ Extension mise à jour !",
+		"description": "Titre de la notification lors d'une mise à jour"
+	},
+	"update_message": {
+		"message": "Nouveautés : vision floue, panneau latéral, menu contextuel, curseurs d’intensité, support multilingue.",
+		"description": "Contenu de la notification d’update"
+	},
+	"context_menu_title": {
+		"message": "Ouvrir dans le panneau latéral",
+		"description": "Title for the context menu"
+	},
+	"error_extension_usage_title": {
+		"message": "Extension non applicable sur cette page",
+		"description": "Titre de la notification d'erreur d'utilisation de l'extension"
+	},
+	"error_extension_usage_message": {
+		"message": "Par mesure de sécurité, l'extension ne peut pas être appliquée sur les pages internes de Chrome.",
+		"description": "Message de la notification d'erreur d'utilisation de l'extension"
+	}
 }

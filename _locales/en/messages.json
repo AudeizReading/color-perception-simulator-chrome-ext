@@ -1,78 +1,78 @@
 {
-  "extension_title": {
-    "message": "Color Perception Simulator",
-    "description": "Extension H1 title"
-  },
-  "protanopia": {
-    "message": "Protanopia",
-    "description": "Title for the protanopia filter"
-  },
-  "protanopia_description": {
-    "message": "A protanope is a person who does not perceive the color red. Reds, oranges, and yellows appear darker, while greens and blues appear brighter.",
-    "description": "Description of protanopia"
-  },
-  "deuteranopia": {
-    "message": "Deuteranopia",
-    "description": "Title for the deuteranopia filter"
-  },
-  "deuteranopia_description": {
-    "message": "A deuteranope is a person who does not perceive the color green. Greens appear darker, while reds and browns appear brighter.",
-    "description": "Description of deuteranopia"
-  },
-  "tritanopia": {
-    "message": "Tritanopia",
-    "description": "Title for the tritanopia filter"
-  },
-  "tritanopia_description": {
-    "message": "A tritanope is a person who does not perceive the color blue. Blues appear darker, while yellows and reds appear brighter.",
-    "description": "Description of tritanopia"
-  },
-  "achromatopsia": {
-    "message": "Achromatopsia",
-    "description": "Title for the achromatopsia filter"
-  },
-  "achromatopsia_description": {
-    "message": "An achromatope is a person who does not perceive color. Colors appear as shades of gray.",
-    "description": "Description of achromatopsia"
-  },
-  "blur_vision": {
-    "message": "Blurred vision",
-    "description": "Title for the blurred vision filter"
-  },
-  "blur_vision_description": {
-    "message": "Blurred vision reduces the sharpness of edges and details, making everything look slightly veiled or hazy.",
-    "description": "Description of blurred vision"
-  },
-  "intensity": {
-    "message": "Intensity",
-    "description": "Label for the intensity slider"
-  },
-  "reset": {
-    "message": "Reset",
-    "description": "Button to reset the filters"
-  },
-  "simulate": {
-    "message": "Simulate",
-    "description": "Button to apply the simulation filters"
-  },
-  "update_title": {
-    "message": "✨ Extension updated!",
-    "description": "Title of the notification when the extension is updated"
-  },
-  "update_message": {
-    "message": "What's new: blurry vision, side panel, context menu, intensity sliders, multilingual support.",
-    "description": "Content of the update notification"
-  },
-  "context_menu_title": {
-    "message": "Open in side panel",
-    "description": "Title for the context menu"
-  },
-  "error_extension_usage_title": {
-    "message": "Extension cannot be applied on this page",
-    "description": "Title of the notification when the extension cannot be applied"
-  },
-  "error_extension_usage_message": {
-    "message": "For security reasons, the extension cannot be applied on Chrome's internal pages.",
-    "description": "Message of the error notification when the extension cannot be applied"
-  }
+	"extension_title": {
+		"message": "See colors differently",
+		"description": "Extension H1 title"
+	},
+	"protanopia": {
+		"message": "Protanopia",
+		"description": "Title for the protanopia filter"
+	},
+	"protanopia_description": {
+		"message": "A protanope is a person who does not perceive the color red. Reds, oranges, and yellows appear darker, while greens and blues appear brighter.",
+		"description": "Description of protanopia"
+	},
+	"deuteranopia": {
+		"message": "Deuteranopia",
+		"description": "Title for the deuteranopia filter"
+	},
+	"deuteranopia_description": {
+		"message": "A deuteranope is a person who does not perceive the color green. Greens appear darker, while reds and browns appear brighter.",
+		"description": "Description of deuteranopia"
+	},
+	"tritanopia": {
+		"message": "Tritanopia",
+		"description": "Title for the tritanopia filter"
+	},
+	"tritanopia_description": {
+		"message": "A tritanope is a person who does not perceive the color blue. Blues appear darker, while yellows and reds appear brighter.",
+		"description": "Description of tritanopia"
+	},
+	"achromatopsia": {
+		"message": "Achromatopsia",
+		"description": "Title for the achromatopsia filter"
+	},
+	"achromatopsia_description": {
+		"message": "An achromatope is a person who does not perceive color. Colors appear as shades of gray.",
+		"description": "Description of achromatopsia"
+	},
+	"blur_vision": {
+		"message": "Blurred vision",
+		"description": "Title for the blurred vision filter"
+	},
+	"blur_vision_description": {
+		"message": "Blurred vision reduces the sharpness of edges and details, making everything look slightly veiled or hazy.",
+		"description": "Description of blurred vision"
+	},
+	"intensity": {
+		"message": "Intensity",
+		"description": "Label for the intensity slider"
+	},
+	"reset": {
+		"message": "Reset",
+		"description": "Button to reset the filters"
+	},
+	"simulate": {
+		"message": "Simulate",
+		"description": "Button to apply the simulation filters"
+	},
+	"update_title": {
+		"message": "✨ Extension updated!",
+		"description": "Title of the notification when the extension is updated"
+	},
+	"update_message": {
+		"message": "What's new: blurry vision, side panel, context menu, intensity sliders, multilingual support.",
+		"description": "Content of the update notification"
+	},
+	"context_menu_title": {
+		"message": "Open in side panel",
+		"description": "Title for the context menu"
+	},
+	"error_extension_usage_title": {
+		"message": "Extension cannot be applied on this page",
+		"description": "Title of the notification when the extension cannot be applied"
+	},
+	"error_extension_usage_message": {
+		"message": "For security reasons, the extension cannot be applied on Chrome's internal pages.",
+		"description": "Message of the error notification when the extension cannot be applied"
+	}
 }
