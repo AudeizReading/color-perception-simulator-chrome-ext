@@ -88,6 +88,17 @@ function createAlertError() {
 	}, 8000);
 }
 
+function updateRangeValue(filter, value) {
+	const spanValue = document.getElementById(`range-${filter}-value`);
+	if (spanValue) {
+		if (filter === "blur") {
+			spanValue.textContent = parseInt(value * 10) + " px";
+		} else {
+			spanValue.textContent = parseInt(value * 100) + " %";
+		}
+	}
+}
+
 /**
  * The filter is applied by injecting a CSS filter into the head of the document.
  *
@@ -157,13 +168,18 @@ filters.forEach((filter) => {
 	});
 
 	if (filter !== "reset") {
-		document
+		const rangeInputElt = document
 			.getElementById(`range-${filter}`)
-			.addEventListener("input", (event) => {
-				const value = event.target.value;
 
-				applyFilter(filter, value);
-			});
+		rangeInputElt.addEventListener("input", (event) => {
+			const value = event.target.value;
+
+			updateRangeValue(filter, value);
+			toggleActiveSections(filter, el);
+			applyFilter(filter, value);
+		});
+		const value = rangeInputElt.value
+		updateRangeValue(filter, value);
 	}
 });
 

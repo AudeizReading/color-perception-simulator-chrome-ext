@@ -1,170 +1,189 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/css/light.css" />
-    <link rel="stylesheet" type="text/css" href="/css/side_panel.css" />
-    <title data-i18n="extension_title"></title>
-  </head>
+<head>
+	<meta charset="UTF-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<link href="/css/light.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/side_panel.css" rel="stylesheet" type="text/css"/>
+	<title data-i18n="extension_title"></title>
+</head>
 
-  <body>
-    <header>
-      <h1
-        data-i18n="extension_title"
-        data-i18n-aria-label="extension_title"
-      ></h1>
-      <button
-        id="reset"
-        data-i18n="reset"
-        data-i18n-aria-label="reset"
-      ></button>
-    </header>
+<body>
+<header>
+	<h1
+			data-i18n="extension_title"
+			data-i18n-aria-label="extension_title"
+	></h1>
+	<button
+			data-i18n="reset"
+			data-i18n-aria-label="reset"
+			id="reset"
+	>
+		<svg
+				fill="none"
+				height="1.7em"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				viewBox="0 0 24 24"
+				width="1.7em">
+			<polyline points="1 4 1 10 7 10"/>
+			<path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+		</svg>
+	</button>
+</header>
 
-    <main id="main-container">
-      <section class="card">
-        <h2 id="heading-protanopia" data-i18n="protanopia"></h2>
-        <p id="desc-protanopia" data-i18n="protanopia_description"></p>
-        <section class="card-controls">
-          <button
-            id="protanope"
-            data-i18n="simulate"
-            data-i18n-aria-label="simulate"
-            aria-labelledby="heading-protanopia"
-            aria-describedby="desc-protanopia"
-          ></button>
-          <label
-            id="label-range-protanope"
-            for="range-protanope"
-            data-i18n="intensity"
-          >
-            <input
-              type="range"
-              id="range-protanope"
-              min="0"
-              max="1"
-              value="1"
-              step="0.1"
-              aria-labelledby="label-range-protanope heading-protanopia"
-            />
-          </label>
-        </section>
-      </section>
+<main id="main-container">
+	<section class="card">
+		<h2 data-i18n="protanopia" id="heading-protanopia"></h2>
+		<p data-i18n="protanopia_description" id="desc-protanopia"></p>
+		<section class="card-controls">
+			<button
+					aria-describedby="desc-protanopia"
+					aria-labelledby="heading-protanopia"
+					data-i18n="simulate"
+					data-i18n-aria-label="simulate"
+					id="protanope"
+			></button>
+			<label
+					data-i18n="intensity"
+					for="range-protanope"
+					id="label-range-protanope"
+			>
+				<span class="range--span" id="range-protanope-value"></span>
 
-      <section class="card">
-        <h2 id="heading-deuteranopia" data-i18n="deuteranopia"></h2>
-        <p id="desc-deuteranopia" data-i18n="deuteranopia_description"></p>
-        <section class="card-controls">
-          <button
-            id="deuteranope"
-            data-i18n="simulate"
-            data-i18n-aria-label="simulate"
-            aria-labelledby="heading-deuteranopia"
-            aria-describedby="desc-deuteranopia"
-          ></button>
-          <label
-            id="label-range-deuteranope"
-            for="range-deuteranope"
-            data-i18n="intensity"
-          >
-            <input
-              type="range"
-              id="range-deuteranope"
-              min="0"
-              max="1"
-              value="1"
-              step="0.1"
-              aria-labelledby="label-range-deuteranope heading-deuteranopia"
-            />
-          </label>
-        </section>
-      </section>
+				<input
+						aria-labelledby="label-range-protanope heading-protanopia"
+						id="range-protanope"
+						max="1"
+						min="0"
+						step="0.1"
+						type="range"
+						value="1"
+				/>
+			</label>
+		</section>
+	</section>
 
-      <section class="card">
-        <h2 id="heading-tritanopia" data-i18n="tritanopia"></h2>
-        <p id="desc-tritanopia" data-i18n="tritanopia_description"></p>
-        <section class="card-controls">
-          <button
-            id="tritanope"
-            data-i18n="simulate"
-            data-i18n-aria-label="simulate"
-            aria-labelledby="heading-tritanopia"
-            aria-describedby="desc-tritanopia"
-          ></button>
-          <label
-            id="label-range-tritanope"
-            for="range-tritanope"
-            data-i18n="intensity"
-          >
-            <input
-              type="range"
-              id="range-tritanope"
-              min="0"
-              max="1"
-              value="1"
-              step="0.1"
-              aria-labelledby="label-range-tritanope heading-tritanopia"
-            />
-          </label>
-        </section>
-      </section>
+	<section class="card">
+		<h2 data-i18n="deuteranopia" id="heading-deuteranopia"></h2>
+		<p data-i18n="deuteranopia_description" id="desc-deuteranopia"></p>
+		<section class="card-controls">
+			<button
+					aria-describedby="desc-deuteranopia"
+					aria-labelledby="heading-deuteranopia"
+					data-i18n="simulate"
+					data-i18n-aria-label="simulate"
+					id="deuteranope"
+			></button>
+			<label
+					data-i18n="intensity"
+					for="range-deuteranope"
+					id="label-range-deuteranope"
+			>
+				<span class="range--span" id="range-deuteranope-value"></span>
+				<input
+						aria-labelledby="label-range-deuteranope heading-deuteranopia"
+						id="range-deuteranope"
+						max="1"
+						min="0"
+						step="0.1"
+						type="range"
+						value="1"
+				/>
+			</label>
+		</section>
+	</section>
 
-      <section class="card">
-        <h2 id="heading-achromatopsia" data-i18n="achromatopsia"></h2>
-        <p id="desc-achromatopsia" data-i18n="achromatopsia_description"></p>
-        <section class="card-controls">
-          <button
-            id="achromatope"
-            data-i18n="simulate"
-            data-i18n-aria-label="simulate"
-            aria-labelledby="heading-achromatopsia"
-            aria-describedby="desc-achromatopsia"
-          ></button>
-          <label
-            id="label-range-achromatope"
-            for="range-achromatope"
-            data-i18n="intensity"
-          >
-            <input
-              type="range"
-              id="range-achromatope"
-              min="0"
-              max="1"
-              value="1"
-              step="0.1"
-              aria-labelledby="label-range-achromatope heading-achromatopsia"
-            />
-          </label>
-        </section>
-      </section>
+	<section class="card">
+		<h2 data-i18n="tritanopia" id="heading-tritanopia"></h2>
+		<p data-i18n="tritanopia_description" id="desc-tritanopia"></p>
+		<section class="card-controls">
+			<button
+					aria-describedby="desc-tritanopia"
+					aria-labelledby="heading-tritanopia"
+					data-i18n="simulate"
+					data-i18n-aria-label="simulate"
+					id="tritanope"
+			></button>
+			<label
+					data-i18n="intensity"
+					for="range-tritanope"
+					id="label-range-tritanope"
+			>
+				<span class="range--span" id="range-tritanope-value"></span>
+				<input
+						aria-labelledby="label-range-tritanope heading-tritanopia"
+						id="range-tritanope"
+						max="1"
+						min="0"
+						step="0.1"
+						type="range"
+						value="1"
+				/>
+			</label>
+		</section>
+	</section>
 
-      <section class="card">
-        <h2 id="heading-blur" data-i18n="blur_vision"></h2>
-        <p id="desc-blur" data-i18n="blur_vision_description"></p>
-        <section class="card-controls">
-          <button
-            id="blur"
-            data-i18n="simulate"
-            data-i18n-aria-label="simulate"
-            aria-labelledby="heading-blur"
-            aria-describedby="desc-blur"
-          ></button>
-          <label id="label-range-blur" for="range-blur" data-i18n="intensity">
-            <input
-              type="range"
-              id="range-blur"
-              min="0"
-              max="1"
-              value="0.3"
-              step="0.1"
-              aria-labelledby="label-range-blur heading-blur"
-            />
-          </label>
-        </section>
-      </section>
-    </main>
+	<section class="card">
+		<h2 data-i18n="achromatopsia" id="heading-achromatopsia"></h2>
+		<p data-i18n="achromatopsia_description" id="desc-achromatopsia"></p>
+		<section class="card-controls">
+			<button
+					aria-describedby="desc-achromatopsia"
+					aria-labelledby="heading-achromatopsia"
+					data-i18n="simulate"
+					data-i18n-aria-label="simulate"
+					id="achromatope"
+			></button>
+			<label
+					data-i18n="intensity"
+					for="range-achromatope"
+					id="label-range-achromatope"
+			>
+				<span class="range--span" id="range-achromatope-value"></span>
+				<input
+						aria-labelledby="label-range-achromatope heading-achromatopsia"
+						id="range-achromatope"
+						max="1"
+						min="0"
+						step="0.1"
+						type="range"
+						value="1"
+				/>
+			</label>
+		</section>
+	</section>
 
-    <script src="filters/utils.js"></script>
-    <script src="side_panel.js"></script>
-  </body>
+	<section class="card">
+		<h2 data-i18n="blur_vision" id="heading-blur"></h2>
+		<p data-i18n="blur_vision_description" id="desc-blur"></p>
+		<section class="card-controls">
+			<button
+					aria-describedby="desc-blur"
+					aria-labelledby="heading-blur"
+					data-i18n="simulate"
+					data-i18n-aria-label="simulate"
+					id="blur"
+			></button>
+			<label data-i18n="intensity" for="range-blur" id="label-range-blur">
+				<span class="range--span" id="range-blur-value"></span>
+				<input
+						aria-labelledby="label-range-blur heading-blur"
+						id="range-blur"
+						max="1"
+						min="0"
+						step="0.1"
+						type="range"
+						value="0.3"
+				/>
+			</label>
+		</section>
+	</section>
+</main>
+
+<script src="filters/utils.js"></script>
+<script src="side_panel.js"></script>
+</body>
 </html>
