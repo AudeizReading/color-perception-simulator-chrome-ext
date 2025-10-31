@@ -1,0 +1,78 @@
+{
+	"extension_title": {
+		"message": "Vedere i colori in modo diverso",
+		"description": "Titolo h1 dell’estensione"
+	},
+	"protanopia": {
+		"message": "Protanopia",
+		"description": "Titolo del filtro per la protanopia"
+	},
+	"protanopia_description": {
+		"message": "La persona protanope non percepisce il colore rosso. Rossi, arancioni e gialli appaiono più scuri, mentre verdi e blu appaiono più chiari.",
+		"description": "Descrizione del disturbo della protanopia"
+	},
+	"deuteranopia": {
+		"message": "Deuteranopia",
+		"description": "Titolo del filtro per la deuteranopia"
+	},
+	"deuteranopia_description": {
+		"message": "La persona deuteranope non percepisce il colore verde. I verdi appaiono più scuri, mentre rossi e marroni appaiono più chiari.",
+		"description": "Descrizione del disturbo della deuteranopia"
+	},
+	"tritanopia": {
+		"message": "Tritanopia",
+		"description": "Titolo del filtro per la tritanopia"
+	},
+	"tritanopia_description": {
+		"message": "La persona tritanope non percepisce il colore blu. I blu appaiono più scuri, mentre gialli e rossi appaiono più chiari.",
+		"description": "Descrizione del disturbo della tritanopia"
+	},
+	"achromatopsia": {
+		"message": "Acromatopsia",
+		"description": "Titolo del filtro per l’acromatopsia"
+	},
+	"achromatopsia_description": {
+		"message": "La persona acromatope non percepisce i colori. I colori appaiono in sfumature di grigio.",
+		"description": "Descrizione del disturbo dell’acromatopsia"
+	},
+	"blur_vision": {
+		"message": "Visione sfocata",
+		"description": "Titolo del filtro per la visione sfocata"
+	},
+	"blur_vision_description": {
+		"message": "La visione sfocata riduce la nitidezza dei contorni e dei dettagli, dando l’impressione che tutto sia leggermente velato o nebbioso.",
+		"description": "Descrizione del disturbo di visione sfocata"
+	},
+	"intensity": {
+		"message": "Intensità",
+		"description": "Etichetta per il cursore dell’intensità"
+	},
+	"reset": {
+		"message": "Reimposta",
+		"description": "Pulsante per reimpostare i filtri"
+	},
+	"simulate": {
+		"message": "Prova",
+		"description": "Pulsante per applicare i filtri di simulazione"
+	},
+	"update_title": {
+		"message": "✨ Estensione aggiornata!",
+		"description": "Titolo della notifica in caso di aggiornamento"
+	},
+	"update_message": {
+		"message": "Novità: visione sfocata, pannello laterale, menu contestuale, cursori di intensità, supporto multilingue.",
+		"description": "Contenuto della notifica di aggiornamento"
+	},
+	"context_menu_title": {
+		"message": "Apri nel pannello laterale",
+		"description": "Titolo per il menu contestuale"
+	},
+	"error_extension_usage_title": {
+		"message": "Estensione non applicabile su questa pagina",
+		"description": "Titolo della notifica di errore d’uso dell’estensione"
+	},
+	"error_extension_usage_message": {
+		"message": "Per motivi di sicurezza, l’estensione non può essere applicata alle pagine interne di Chrome.",
+		"description": "Messaggio della notifica di errore d’uso dell’estensione"
+	}
+}

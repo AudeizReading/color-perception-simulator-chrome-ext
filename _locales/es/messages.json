@@ -1,0 +1,78 @@
+{
+	"extension_title": {
+		"message": "Ver los colores de otra manera",
+		"description": "Título h1 de la extensión"
+	},
+	"protanopia": {
+		"message": "Protanopia",
+		"description": "Título del filtro de protanopia"
+	},
+	"protanopia_description": {
+		"message": "La persona protanope no percibe el color rojo. Los rojos, naranjas y amarillos se ven más oscuros, mientras que los verdes y azules se ven más claros.",
+		"description": "Descripción del trastorno de protanopia"
+	},
+	"deuteranopia": {
+		"message": "Deuteranopia",
+		"description": "Título del filtro de deuteranopia"
+	},
+	"deuteranopia_description": {
+		"message": "La persona deuteranope no percibe el color verde. Los verdes se ven más oscuros, mientras que los rojos y marrones se ven más claros.",
+		"description": "Descripción del trastorno de deuteranopia"
+	},
+	"tritanopia": {
+		"message": "Tritanopia",
+		"description": "Título del filtro de tritanopia"
+	},
+	"tritanopia_description": {
+		"message": "La persona tritanope no percibe el color azul. Los azules se ven más oscuros, mientras que los amarillos y rojos se ven más claros.",
+		"description": "Descripción del trastorno de tritanopia"
+	},
+	"achromatopsia": {
+		"message": "Acromatopsia",
+		"description": "Título del filtro de acromatopsia"
+	},
+	"achromatopsia_description": {
+		"message": "La persona acromatope no percibe el color. Los colores aparecen en tonos de gris.",
+		"description": "Descripción del trastorno de acromatopsia"
+	},
+	"blur_vision": {
+		"message": "Visión borrosa",
+		"description": "Título del filtro de visión borrosa"
+	},
+	"blur_vision_description": {
+		"message": "La visión borrosa reduce la nitidez de los contornos y los detalles, dando la impresión de que todo está ligeramente velado o brumoso.",
+		"description": "Descripción del trastorno de visión borrosa"
+	},
+	"intensity": {
+		"message": "Intensidad",
+		"description": "Etiqueta para el control deslizante de intensidad"
+	},
+	"reset": {
+		"message": "Restablecer",
+		"description": "Botón para restablecer los filtros"
+	},
+	"simulate": {
+		"message": "Probar",
+		"description": "Botón para aplicar los filtros de simulación"
+	},
+	"update_title": {
+		"message": "✨ ¡Extensión actualizada!",
+		"description": "Título de la notificación tras una actualización"
+	},
+	"update_message": {
+		"message": "Novedades: visión borrosa, panel lateral, menú contextual, deslizadores de intensidad, compatibilidad multilingüe.",
+		"description": "Contenido de la notificación de actualización"
+	},
+	"context_menu_title": {
+		"message": "Abrir en el panel lateral",
+		"description": "Título para el menú contextual"
+	},
+	"error_extension_usage_title": {
+		"message": "Extensión no aplicable en esta página",
+		"description": "Título de la notificación de error de uso de la extensión"
+	},
+	"error_extension_usage_message": {
+		"message": "Por motivos de seguridad, la extensión no puede aplicarse en las páginas internas de Chrome.",
+		"description": "Mensaje de la notificación de error de uso de la extensión"
+	}
+}

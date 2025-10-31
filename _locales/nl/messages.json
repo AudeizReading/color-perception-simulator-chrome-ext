@@ -1,0 +1,78 @@
+{
+	"extension_title": {
+		"message": "Kleuren anders zien",
+		"description": "H1-titel van de extensie"
+	},
+	"protanopia": {
+		"message": "Protanopie",
+		"description": "Titel voor de protanopie-filter"
+	},
+	"protanopia_description": {
+		"message": "Iemand met protanopie neemt rood niet waar. Rood-, oranje- en geeltinten lijken donkerder, terwijl groen en blauw lichter lijken.",
+		"description": "Beschrijving van de stoornis protanopie"
+	},
+	"deuteranopia": {
+		"message": "Deuteranopie",
+		"description": "Titel voor de deuteranopie-filter"
+	},
+	"deuteranopia_description": {
+		"message": "Iemand met deuteranopie neemt groen niet waar. Groentinten lijken donkerder, terwijl rood en bruin lichter lijken.",
+		"description": "Beschrijving van de stoornis deuteranopie"
+	},
+	"tritanopia": {
+		"message": "Tritanopie",
+		"description": "Titel voor de tritanopie-filter"
+	},
+	"tritanopia_description": {
+		"message": "Iemand met tritanopie neemt blauw niet waar. Blauwtinten lijken donkerder, terwijl geel en rood lichter lijken.",
+		"description": "Beschrijving van de stoornis tritanopie"
+	},
+	"achromatopsia": {
+		"message": "Achromatopsie",
+		"description": "Titel voor de achromatopsie-filter"
+	},
+	"achromatopsia_description": {
+		"message": "Iemand met achromatopsie ziet geen kleuren. Alles verschijnt in grijstinten.",
+		"description": "Beschrijving van de stoornis achromatopsie"
+	},
+	"blur_vision": {
+		"message": "Wazig zicht",
+		"description": "Titel voor de filter ‘wazig zicht’"
+	},
+	"blur_vision_description": {
+		"message": "Wazig zicht vermindert de scherpte van contouren en details en geeft de indruk dat alles licht gesluierd of mistig is.",
+		"description": "Beschrijving van de stoornis ‘wazig zicht’"
+	},
+	"intensity": {
+		"message": "Intensiteit",
+		"description": "Label voor de intensiteitsschuifregelaar"
+	},
+	"reset": {
+		"message": "Opnieuw instellen",
+		"description": "Knop om de filters opnieuw in te stellen"
+	},
+	"simulate": {
+		"message": "Testen",
+		"description": "Knop om de simulatiefilters toe te passen"
+	},
+	"update_title": {
+		"message": "✨ Extensie bijgewerkt!",
+		"description": "Titel van de melding bij een update"
+	},
+	"update_message": {
+		"message": "Nieuw: wazig zicht, zijpaneel, contextmenu, intensiteitsschuifregelaars, meertalige ondersteuning.",
+		"description": "Inhoud van de update-melding"
+	},
+	"context_menu_title": {
+		"message": "Openen in het zijpaneel",
+		"description": "Titel voor het contextmenu"
+	},
+	"error_extension_usage_title": {
+		"message": "Extensie niet toepasbaar op deze pagina",
+		"description": "Titel van de foutmelding bij gebruik van de extensie"
+	},
+	"error_extension_usage_message": {
+		"message": "Om veiligheidsredenen kan de extensie niet worden toegepast op interne Chrome-pagina’s.",
+		"description": "Bericht van de foutmelding bij gebruik van de extensie"
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"extension_title": {
+		"message": "Farben anders sehen",
+		"description": "H1-Titel der Erweiterung"
+	},
+	"protanopia": {
+		"message": "Protanopie",
+		"description": "Titel für den Protanopie-Filter"
+	},
+	"protanopia_description": {
+		"message": "Protanopen nehmen die Farbe Rot nicht wahr. Rot-, Orange- und Gelbtöne erscheinen dunkler, während Grün und Blau heller wirken.",
+		"description": "Beschreibung der Sehstörung Protanopie"
+	},
+	"deuteranopia": {
+		"message": "Deuteranopie",
+		"description": "Titel für den Deuteranopie-Filter"
+	},
+	"deuteranopia_description": {
+		"message": "Deuteranopen nehmen die Farbe Grün nicht wahr. Grüntöne erscheinen dunkler, während Rot- und Brauntöne heller wirken.",
+		"description": "Beschreibung der Sehstörung Deuteranopie"
+	},
+	"tritanopia": {
+		"message": "Tritanopie",
+		"description": "Titel für den Tritanopie-Filter"
+	},
+	"tritanopia_description": {
+		"message": "Tritanopen nehmen die Farbe Blau nicht wahr. Blautöne erscheinen dunkler, während Gelb- und Rottöne heller wirken.",
+		"description": "Beschreibung der Sehstörung Tritanopie"
+	},
+	"achromatopsia": {
+		"message": "Achromatopsie",
+		"description": "Titel für den Achromatopsie-Filter"
+	},
+	"achromatopsia_description": {
+		"message": "Achromaten nehmen keine Farben wahr. Alles erscheint in Graustufen.",
+		"description": "Beschreibung der Sehstörung Achromatopsie"
+	},
+	"blur_vision": {
+		"message": "Verschwommenes Sehen",
+		"description": "Titel für den Filter „Verschwommenes Sehen“"
+	},
+	"blur_vision_description": {
+		"message": "Verschwommenes Sehen verringert die Schärfe von Konturen und Details und vermittelt den Eindruck, dass alles leicht verschleiert oder neblig ist.",
+		"description": "Beschreibung der Beeinträchtigung „Verschwommenes Sehen“"
+	},
+	"intensity": {
+		"message": "Intensität",
+		"description": "Beschriftung für den Intensitätsregler"
+	},
+	"reset": {
+		"message": "Zurücksetzen",
+		"description": "Schaltfläche zum Zurücksetzen der Filter"
+	},
+	"simulate": {
+		"message": "Testen",
+		"description": "Schaltfläche zum Anwenden der Simulationsfilter"
+	},
+	"update_title": {
+		"message": "✨ Erweiterung aktualisiert!",
+		"description": "Titel der Benachrichtigung bei einem Update"
+	},
+	"update_message": {
+		"message": "Neue Funktionen: verschwommenes Sehen, Seitenleiste, Kontextmenü, Intensitätsregler, mehrsprachige Unterstützung.",
+		"description": "Inhalt der Update-Benachrichtigung"
+	},
+	"context_menu_title": {
+		"message": "In der Seitenleiste öffnen",
+		"description": "Titel für das Kontextmenü"
+	},
+	"error_extension_usage_title": {
+		"message": "Erweiterung auf dieser Seite nicht anwendbar",
+		"description": "Titel der Fehlermeldung zur Verwendung der Erweiterung"
+	},
+	"error_extension_usage_message": {
+		"message": "Aus Sicherheitsgründen kann die Erweiterung nicht auf internen Chrome-Seiten angewendet werden.",
+		"description": "Text der Fehlermeldung zur Verwendung der Erweiterung"
+	}
+}
