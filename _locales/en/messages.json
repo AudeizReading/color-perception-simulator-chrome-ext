@@ -52,7 +52,7 @@
 		"description": "Button to reset the filters"
 	},
 	"simulate": {
-		"message": "Simulate",
+		"message": "Test",
 		"description": "Button to apply the simulation filters"
 	},
 	"update_title": {

@@ -52,7 +52,7 @@
 		"description": "Bouton pour réinitialiser les filtres"
 	},
 	"simulate": {
-		"message": "Simuler",
+		"message": "Tester",
 		"description": "Bouton pour appliquer les filtres de simulation"
 	},
 	"update_title": {
