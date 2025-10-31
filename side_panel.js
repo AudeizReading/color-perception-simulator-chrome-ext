@@ -29,8 +29,10 @@ function onClickSimulateButton(filter) {
 			(f) => {
 				if (f === "blur") {
 					document.getElementById(`range-${f}`).value = blurDefaultValue;
+					updateRangeValue(f, blurDefaultValue);
 				} else {
 					document.getElementById(`range-${f}`).value = rangeValue;
+					updateRangeValue(f, rangeValue);
 				}
 			}
 		);
@@ -154,8 +156,37 @@ function toggleActiveSections(filter, el) {
 	oldActives?.forEach((el) => {
 		el?.classList.toggle("active");
 	});
+
+	const oldLabels = document.querySelectorAll("section.card label");
+	oldLabels?.forEach((old) => {
+		if (!old.classList.contains("opacity-8")) {
+			const f = old.getAttribute("for").split("-")[1];
+			toggleLabelOpacity(f);
+		}
+	})
+	const oldInputs = document.querySelectorAll("section.card label input");
+	oldInputs.forEach((input) => {
+		input.disabled = true;
+	})
 	if (filter !== "reset") {
 		el?.parentElement?.parentElement?.classList.toggle("active");
+		toggleLabelOpacity(filter);
+		toggleActiveRangeInput(filter, false)
+	}
+}
+
+function toggleLabelOpacity(filter) {
+	const labelRangeElt = document.getElementById(`label-range-${filter}`)
+	if (labelRangeElt) {
+		labelRangeElt.classList.toggle("opacity-8");
+	}
+}
+
+function toggleActiveRangeInput(filter, disabled = true) {
+	const rangeInputElt = document
+		.getElementById(`range-${filter}`)
+	if (rangeInputElt) {
+		rangeInputElt.disabled = disabled;
 	}
 }
 
@@ -168,18 +199,21 @@ filters.forEach((filter) => {
 	});
 
 	if (filter !== "reset") {
+		toggleLabelOpacity(filter)
+		toggleActiveRangeInput(filter);
 		const rangeInputElt = document
 			.getElementById(`range-${filter}`)
-
-		rangeInputElt.addEventListener("input", (event) => {
-			const value = event.target.value;
-
+		if (rangeInputElt) {
+			const value = rangeInputElt.value
+			rangeInputElt.disabled = true;
 			updateRangeValue(filter, value);
-			toggleActiveSections(filter, el);
+		}
+
+		rangeInputElt?.addEventListener("input", (event) => {
+			const value = event.target.value;
+			updateRangeValue(filter, value);
 			applyFilter(filter, value);
 		});
-		const value = rangeInputElt.value
-		updateRangeValue(filter, value);
 	}
 });
 
