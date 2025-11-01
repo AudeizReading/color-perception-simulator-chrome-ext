@@ -80,17 +80,23 @@ button {
     outline: none;
 }
 
+button:focus {
+    outline: 0.125em solid var(--md-sys-color-primary-container);
+    /*border-color: var(--md-sys-color-outline);*/
+    box-shadow: 0 0 0.25em var(--md-sys-color-on-primary-fixed-variant);
+
+    border: 3px double var(--md-sys-color-primary-container)
+}
+
 button:hover {
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    border-color: var(--md-sys-color-outline);
+    outline: none;
+    /*border-color: var(--md-sys-color-outline);*/
+    border: 3px double var(--md-sys-color-on-primary-fixed-variant);
+    transition: all 0.3s ease-in-out;
 }
 
-button:focus {
-    outline: 0.125em solid var(--md-sys-color-primary-container);
-    border-color: var(--md-sys-color-outline);
-    box-shadow: 0 0 0.25em var(--md-sys-color-on-primary-fixed-variant);
-}
 
 button:active {
     background-color: var(--md-sys-color-primary);
@@ -106,23 +112,23 @@ button#reset {
     justify-content: center;
     align-items: center;
     gap: 0.75em;
+    border: 1px solid transparent;
 }
 
 button#reset:hover {
     background-color: var(--md-sys-color-primary-container);
+    border-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary-container);
 }
 
 button#reset:focus {
-    outline: 0.0625em solid var(--md-sys-color-on-primary-container);
-    border-color: var(--md-sys-color-outline-variant);
-    box-shadow: 0 0 0.0625em 0.1em var(--md-sys-color-primary-container);
-    border-width: 0.0625em;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0.5em 0.1em var(--md-sys-color-primary-container);
 }
 
 button#reset:active {
-    border-color: var(--md-sys-color-outline-variant);
-    border-width: 0.0625em;
+    box-shadow: 0 0 0.5em 0.1em var(--md-sys-color-primary-container);
 }
 
 /* Cartes d'information */
@@ -232,12 +238,12 @@ button#reset:active {
 }
 
 .card-controls input[type="range"]:disabled {
-    opacity: 0.7;
+    opacity: 0.8;
     cursor: not-allowed;
 }
 
-.opcity-8 {
-    opacity: 0.8;
+.opacity-8 {
+    opacity: 0.7;
 }
 
 .card-controls input[type="range"]::-webkit-slider-thumb {
@@ -247,8 +253,7 @@ button#reset:active {
     height: 1.25rem;
     border-radius: 50%;
     background: var(--md-sys-color-on-primary-container);
-    border: 3px solid var(--md-sys-color-primary-container);
-    outline: 1px solid var(--md-sys-color-primary-fixed-dim);
+    border: 3px double var(--md-sys-color-primary-container);
 }
 
 @media (prefers-reduced-motion: reduce) {
