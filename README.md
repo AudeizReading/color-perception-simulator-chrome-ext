@@ -93,18 +93,21 @@ standard
 
 ## Nouveaux ajouts
 
-- 31/10/2025 :
+### 31/10/2025 :
 
-1. **Support multilingue étendu** : Ajout de 4 nouvelles langues à l'extension : allemand (de), espagnol (es), italien (
-   it) et néerlandais (nl). Création des fichiers `_locales/[langue]/messages.json` avec traduction complète de tous les
-   messages de l'interface (titres des troubles, descriptions, boutons, notifications). L'extension est maintenant
-   disponible en 6 langues au total.
+1. **Corrections CSS et optimisations** :
+	- Suppression des styles en double dans `side_panel.css`
+	- Correction des marges du conteneur principal pour éliminer les problèmes de scroll
+	- Ajout de `scrollbar-gutter: stable both-edges` pour éviter les sauts de contenu
+	- Amélioration de la transition de la classe `.card.active` pour un feedback visuel
+	  instantané ![Active](./assets/images/readme/update-2025-10-31-active-card.png)
+	- Harmonisation de l'indentation (tabs au lieu d'espaces) pour une meilleure cohérence du code
 
-2. **Amélioration terminologique** : Remplacement du terme "Simuler" par "Tester" dans toutes les locales (
+1. **Amélioration terminologique** : Remplacement du terme "Simuler" par "Tester" dans toutes les locales (
    fr/en/de/es/it/nl) pour une approche plus empathique et moins stigmatisante. Ce changement reflète mieux l'objectif
    de sensibilisation et de compréhension des troubles de perception des couleurs.
 
-3. **Refonte complète de l'affichage des curseurs d'intensité** :
+1. **Refonte complète de l'affichage des curseurs d'intensité** :
 	- Stylisation CSS avancée des inputs `range` avec suppression de l'apparence par défaut (`-webkit-appearance: none`)
 	- Personnalisation du thumb (poignée) avec bordures, outline et couleurs Material Design
 	- Ajout d'un affichage en temps réel de la valeur du curseur (en % pour les troubles de perception, en px pour le
@@ -118,7 +121,7 @@ standard
 	  0.5, thumb grisé) pour indiquer clairement l'état inactif. Cela améliore l'expérience utilisateur en évitant la
 	  confusion et respecte les standards d'accessibilité WCAG.
 
-4. **Refactorisation majeure du panneau latéral (side panel)** :
+1. **Refactorisation majeure du panneau latéral (side panel)** :
 	- **Structure HTML** : Ajout d'IDs sémantiques pour tous les éléments (headings, descriptions) pour améliorer
 	  l'accessibilité ARIA
 	- **CSS** : Migration des propriétés CSS personnalisées (variables CSS) pour une meilleure maintenabilité, avec
@@ -127,30 +130,31 @@ standard
 	  indiquer quelle carte est actuellement utilisée
 	- **Amélioration du layout** : Passage à `grid-auto-flow: row` pour un meilleur contrôle du flux, ajustement des
 	  marges et padding pour éviter les problèmes de scroll
-	- **Bouton reset** : Refonte du style avec suppression du background bleu, ajout d'icône SVG, et amélioration des
-	  états `:hover`, `:focus`, `:active`
+	- **Bouton reset** : Refonte du style avec ajout d'une icone SVG dans le bouton, clarification du sens, amélioration
+	  des
+	  états `:hover`, `:focus`, `:active` ![RAZ](./assets/images/readme/update-2025-10-31-raz.png)
 	- **JavaScript** : Fonction `toggleActiveSections()` pour gérer l'état actif des cartes, amélioration de la fonction
 	  `updateRangeValue()` pour afficher les valeurs avec unités
 
-5. **Mise à jour du titre de l'extension** : Modification dans `_locales/en/messages.json` et
+1. **Mise à jour du titre de l'extension** : Modification dans `_locales/en/messages.json` et
    `_locales/fr/messages.json` vers "See Colors Differently" / "Voir les couleurs autrement" pour un message plus
    inclusif et positif.
 
-6. **Corrections CSS et optimisations** :
-	- Suppression des styles en double dans `side_panel.css`
-	- Correction des marges du conteneur principal pour éliminer les problèmes de scroll
-	- Ajout de `scrollbar-gutter: stable both-edges` pour éviter les sauts de contenu
-	- Amélioration de la transition de la classe `.card.active` pour un feedback visuel instantané
-	- Harmonisation de l'indentation (tabs au lieu d'espaces) pour une meilleure cohérence du code
 
-**Détails techniques** :
+1. **Support multilingue étendu** : Ajout de 4 nouvelles langues à l'extension : allemand (de), espagnol (es), italien (
+   it) et néerlandais (nl). Création des fichiers `_locales/[langue]/messages.json` avec traduction complète de tous les
+   messages de l'interface (titres des troubles, descriptions, boutons, notifications). L'extension est maintenant
+   disponible en 6 langues au total.
+
+#### **Détails techniques** :
 
 - Variables CSS utilisées pour la personnalisation : `--_border-color-card`, `--_border-width-card`,
   `--_border-style-card`, `--box-shadow-card`
 - Nouveaux attributs ARIA ajoutés : `aria-labelledby`, `aria-describedby` sur tous les boutons et inputs range
 - Gestion d'état via classe CSS `.active` avec toggle dans JavaScript
 - Fonctions JS améliorées : `updateRangeValue()`, `toggleActiveSections()`, `onClickSimulateButton()`
-- 23/08/2025 :
+
+### 23/08/2025 :
 
 1. **Fix bug clic sur l'icone d'action de l'extension** : Le panneau latéral s'ouvre correctement à chaque clic sur l'
    icône de l'extension.
@@ -161,7 +165,7 @@ standard
    du Chrome Web Store et de Chrome Developer Documentations. Chrome bloque de lui-meme les extensions sur ses
    differents domaines pour des raisons de sécurité.
 
-- 17/08/2025 :
+### 17/08/2025 :
 
 1. **Menu contextuel** : Accès rapide à l'extension via menu contextuel (clic
    droit) ![Menu contextuel](./assets/images/store/ouvrir-via-menu-contextuel.png)
