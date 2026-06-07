@@ -26,6 +26,24 @@ By contributing, you agree that your contribution will be licensed under the sam
 
 Please read our [Code of Conduct](./CODE_OF_CONDUCT.md) to understand the standards we expect from all contributors.
 
+## Before opening a Pull Request
+
+Before opening a Pull Request, contributors should first open or comment on an issue to explain the intended change.
+
+Pull requests linked to existing issues must only be opened by the contributor assigned to that issue, or after explicit
+maintainer approval.
+
+Pull Requests may be closed without review when they:
+
+- are linked to an issue that was not assigned to the contributor;
+- duplicate ongoing or planned maintainer work;
+- do not fit the current project roadmap;
+- introduce changes that were not discussed beforehand;
+- are limited to low-value typo-only or cosmetic changes;
+- appear primarily intended to gain contribution credit.
+
+This rule exists to avoid duplicated work, keep the project maintainable, and respect the maintainer’s time.
+
 ## Issues and Feature Requests
 
 If you find a bug or have a feature request, please open an issue in the repository. Be sure to include:
@@ -35,21 +53,45 @@ If you find a bug or have a feature request, please open an issue in the reposit
 - Any relevant screenshots or code snippets.
 - Your environment details (browser version, OS, etc.).
 
+## Changes that require prior discussion
+
+The following changes require prior discussion before opening a Pull Request:
+
+- changes to the project roadmap;
+- changes to the extension behavior or user experience;
+- changes to permissions, security, privacy, or browser APIs;
+- architectural changes;
+- large documentation rewrites;
+- AI-assisted or automated contributions;
+- typo-only fixes linked to existing issues.
+
+Pull Requests opened without prior discussion may be closed without review.
+
 ## Documentation
 
-For any changes to the documentation, please ensure that:
+Documentation changes must:
 
-- The documentation is clear and easy to understand.
-- All code examples are correct and functional.
-- Any new features are documented with usage examples.
-- The documentation is updated in the appropriate files.
-- The documentation is consistent with the project's style and tone.
-- The documentation is free of typos and grammatical errors.
-- The documentation is accessible to all users, including those with disabilities.
-- The documentation is organized logically and easy to navigate.
-- The documentation is up-to-date with the latest changes in the codebase.
-- The documentation is written in a way that is easy to translate into other languages if necessary.
-- The documentation is reviewed by at least one other contributor before being merged.
-- The documentation is stored in a version-controlled format (e.g., Markdown) to track changes over time.
-- The documentation is hosted in a publicly accessible location (e.g., GitHub Pages) for easy access by users.
-- The documentation is linked to from the project's main page or README file for easy access.
+- Be clear, accurate, and easy to understand.
+- Stay consistent with the project’s style and tone.
+- Avoid unnecessary wording, duplicated content, or purely cosmetic edits.
+- Keep examples correct, functional, and accessible.
+- Update the relevant documentation when a feature or behavior changes.
+- Improve the project for users, developers, or maintainers.
+
+Typo-only documentation changes may be closed without review when they are linked to unassigned issues, duplicate
+ongoing maintainer work, or appear primarily intended to gain contribution credit.
+
+## AI-assisted contributions
+
+AI-assisted contributions are allowed only when they are reviewed, tested, and clearly owned by a human contributor.
+
+Low-value automated pull requests, typo-only pull requests on unassigned issues, or pull requests created mainly to gain
+contribution credit may be closed without review.
+
+## Maintainer discretion
+
+Maintainers reserve the right to close pull requests that do not fit the project roadmap, duplicate ongoing work, ignore
+contribution rules, or provide limited value compared to the review and maintenance effort required.
+
+A technically correct change may still be declined when it conflicts with planned work, project priorities, or
+contribution guidelines.
