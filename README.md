@@ -80,7 +80,7 @@ Pour créer une extension Chrome, suivez ces étapes :
 
 ### License
 
-- [Custom License](./LICENSE.txt)## Nouveaux ajouts
+- [Custom License](./LICENSE.txt)
 
 ## Nouveaux ajouts
 
